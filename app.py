@@ -37,8 +37,8 @@ PROJECTS = {
     'SQl AI - Access Database In Your Language \n': {
         'url': 'https://github.com/PATELOM925/SQL-AI',
         'description': " - Users can upload SQL databases"
-                       "  - Implements advanced natural language prompts"
-                       "  - Transforms input into precise SQL queries"
+                       " - Implements advanced natural language prompts"
+                       " - Transforms input into precise SQL queries"
     },
      'ChatPDF AI - Talk With Your PDFs \n': {
         'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
