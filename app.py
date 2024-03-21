@@ -136,7 +136,7 @@ cols[3].write('Percentile: 96%')
 # )
 
 
---- PROJECTS ---
+# --- PROJECTS ---
 st.write('#')
 st.subheader('Projects')
 st.write(
