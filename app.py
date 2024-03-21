@@ -24,12 +24,56 @@ SOCIAL_MEDIA = {
     'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
 }
 
+# PROJECTS = {
+#         'ChatPDF AI': {'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/', 'description': "ChatPDF AI leverages advanced NLP techniques and integration with Streamlit Cloud to streamline PDF analysis tasks, achieving an impressive 89% accuracy rate. With features like efficient document retrieval, it empowers users in making informed decisions faster."n " },
+#         'SQl AI': {'url': 'https://github.com/PATELOM925/SQL-AI', 'description': " SQL databases can be uploaded by the user and We have Implemented advanced natural language prompts, transforming input into precise SQL queries " },
+#         'Automated - Exam Paper Checker': {'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker', 'description': "An automated grading system that's making assessment a breeze for teachers and professors, Integrated BERT-Uncased for NLP-based grading, employed Spacy & PyTesseract for image processing ensuring accuracy in assessing diverse exam formats."},
+#         'Meme App': {'url': 'https://github.com/PATELOM925/MemeApp', 'description': 'The "Meme App" is an innovative and fun Android application developed using Kotlin, Android development tools, and the powerful Glide library. This app is designed to bring a smile to your face by delivering a never-ending stream of hilarious and entertaining memes sourced from Reddits API through Retrofit.'},
+    
+
+# }
+
 PROJECTS = {
-    'Meme App': {'url': 'https://github.com/PATELOM925/MemeApp', 'description': 'The "Meme App" is an innovative and fun Android application developed using Kotlin, Android development tools, and the powerful Glide library. This app is designed to bring a smile to your face by delivering a never-ending stream of hilarious and entertaining memes sourced from Reddits API through Retrofit.'},
-    'Automated - Exam Paper Checker': {'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker', 'description': "An automated grading system that's making assessment a breeze for teachers and professors, Integrated BERT-Uncased for NLP-based grading, employed Spacy & PyTesseract for image processing ensuring accuracy in assessing diverse exam formats."},
-    'SQl AI': {'url': 'https://github.com/PATELOM925/SQL-AI', 'description': " SQL databases can be uploaded by the user and We have Implemented advanced natural language prompts, transforming input into precise SQL queries " },
+    'ChatPDF AI': {
+        'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
+        'description': [
+            "Leverages advanced NLP techniques",
+            "Integration with Streamlit Cloud for streamlined PDF analysis",
+            "Achieves an impressive 89% accuracy rate",
+            "Empowers users in making informed decisions faster"
+        ]
+    },
+    'SQl AI': {
+        'url': 'https://github.com/PATELOM925/SQL-AI',
+        'description': [
+            "Users can upload SQL databases",
+            "Implements advanced natural language prompts",
+            "Transforms input into precise SQL queries"
+        ]
+    },
+    'Automated - Exam Paper Checker': {
+        'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker',
+        'description': [
+            "Automated grading system for teachers and professors",
+            "Integration of BERT-Uncased for NLP-based grading",
+            "Utilizes Spacy & PyTesseract for image processing",
+            "Ensures accuracy in assessing diverse exam formats"
+        ]
+    },
+    'Meme App': {
+        'url': 'https://github.com/PATELOM925/MemeApp',
+        'description': [
+            "Innovative and fun Android application developed using Kotlin",
+            "Utilizes Android development tools and Glide library",
+            "Delivers a never-ending stream of hilarious memes",
+            "Sourced from Reddit's API through Retrofit"
+        ]
+    }
 }
 
+
+
+#learnt from 
 Learnt_From = {
     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
     'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
