@@ -33,39 +33,6 @@ SOCIAL_MEDIA = {
 
 # }
 
-PROJECTS = {
-    'SQl AI - Access Database In Your Language \n': {
-        'url': 'https://github.com/PATELOM925/SQL-AI',
-        'description': " - Users can upload SQL databases\n"
-                       " - Implements advanced natural language prompts\n"
-                       " - Transforms input into precise SQL queries"
-    },
-     'ChatPDF AI - Talk With Your PDFs \n': {
-        'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
-        'description': " - Leverages advanced NLP techniques \n"
-                       " - Integration with Streamlit Cloud for streamlined PDF analysis \n"
-                       " - Achieves an impressive 89% accuracy rate \n"
-                       " - Empowers users in making informed decisions faster"
-    },
-    'Autograder - Precision In Every Grade \n': {
-        'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker',
-        'description': " - Automated grading system for teachers and professors \n"
-                       " - Integration of BERT-Uncased for NLP-based grading \n"
-                       " - Utilizes Spacy & PyTesseract for image processing \n"
-                       " - Ensures accuracy in assessing diverse exam formats"
-    },
-    'Meme App': {
-        'url': 'https://github.com/PATELOM925/MemeApp \n',
-        'description': " - Innovative and fun Android application developed using Kotlin \n"
-                       " - Utilizes Android development tools and Glide library \n"
-                       " - Delivers a never-ending stream of hilarious memes \n"
-                       " - Sourced from Reddit's API through Retrofit"
-    }
-}
-
-
-
-
 #learnt from 
 Learnt_From = {
     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
@@ -168,6 +135,46 @@ cols[3].write('Percentile: 96%')
 #     - Major Skills USed: Adobe Photoshop, Adobe Illustrator, Web Content Writing'''
 # )
 
+
+--- PROJECTS ---
+st.write('#')
+st.subheader('Projects')
+st.write(
+    '''
+    :pushpin: [**SQl AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
+    - Allows Users to upload SQL databases and Access them in Natural Language prompts.
+    - Transforms input into precise SQL queries with  an accuracy over *90%*.
+
+    :pushpin: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
+    - let's user retrieve necessary information from PDF (Q/A chatbot).
+    - Accuracy rate over 80% and Empowers them to make informed discussion.
+    '''
+)
+
+# PROJECTS = {
+#      'ChatPDF AI - Talk With Your PDFs \n': {
+#         'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
+#         'description': " - Leverages advanced NLP techniques \n"
+#                        " - Integration with Streamlit Cloud for streamlined PDF analysis \n"
+#                        " - Achieves an impressive 89% accuracy rate \n"
+#                        " - Empowers users in making informed decisions faster"
+#     },
+#     'Autograder - Precision In Every Grade \n': {
+#         'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker',
+#         'description': " - Automated grading system for teachers and professors \n"
+#                        " - Integration of BERT-Uncased for NLP-based grading \n"
+#                        " - Utilizes Spacy & PyTesseract for image processing \n"
+#                        " - Ensures accuracy in assessing diverse exam formats"
+#     },
+#     'Meme App': {
+#         'url': 'https://github.com/PATELOM925/MemeApp \n',
+#         'description': " - Innovative and fun Android application developed using Kotlin \n"
+#                        " - Utilizes Android development tools and Glide library \n"
+#                        " - Delivers a never-ending stream of hilarious memes \n"
+#                        " - Sourced from Reddit's API through Retrofit"
+#     }
+# }
+
 st.write('#')
 st.subheader('**Experience**')
 st.write(
@@ -189,11 +196,7 @@ st.write(
 '''
 )
 
-# --- PROJECTS ---
-st.write('#')
-st.subheader('Projects')
-for project, content in PROJECTS.items():
-    st.write(f'* **[{project}]({content["url"]})**  \n {content["description"]}')
+
 
 # ---ACHIEVEMENTS---
 st.write('#')
@@ -201,8 +204,8 @@ st.subheader('Certifications')
 st.write(
 '''
 - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
-- [Langchain Chat With Your Data] (https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
-- [Excel for Beginners Excel for Beginners] (https://olympus.mygreatlearning.com/courses/12583/certificate)
+- [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
+- [Excel](https://olympus.mygreatlearning.com/courses/12583/certificate)
 '''
 )
  
