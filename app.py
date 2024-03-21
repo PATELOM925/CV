@@ -36,30 +36,30 @@ SOCIAL_MEDIA = {
 PROJECTS = {
     'SQl AI - Access Database In Your Language \n': {
         'url': 'https://github.com/PATELOM925/SQL-AI',
-        'description': " - Users can upload SQL databases"
-                       " - Implements advanced natural language prompts"
+        'description': " - Users can upload SQL databases\n"
+                       " - Implements advanced natural language prompts\n"
                        " - Transforms input into precise SQL queries"
     },
      'ChatPDF AI - Talk With Your PDFs \n': {
         'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
-        'description': "- Leverages advanced NLP techniques \n"
-                       "- Integration with Streamlit Cloud for streamlined PDF analysis \n"
-                       "- Achieves an impressive 89% accuracy rate \n"
-                       "- Empowers users in making informed decisions faster"
+        'description': " - Leverages advanced NLP techniques \n"
+                       " - Integration with Streamlit Cloud for streamlined PDF analysis \n"
+                       " - Achieves an impressive 89% accuracy rate \n"
+                       " - Empowers users in making informed decisions faster"
     },
     'Autograder - Precision In Every Grade \n': {
         'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker',
-        'description': "- Automated grading system for teachers and professors \n"
-                       "- Integration of BERT-Uncased for NLP-based grading \n"
-                       "- Utilizes Spacy & PyTesseract for image processing \n"
-                       "- Ensures accuracy in assessing diverse exam formats"
+        'description': " - Automated grading system for teachers and professors \n"
+                       " - Integration of BERT-Uncased for NLP-based grading \n"
+                       " - Utilizes Spacy & PyTesseract for image processing \n"
+                       " - Ensures accuracy in assessing diverse exam formats"
     },
     'Meme App': {
         'url': 'https://github.com/PATELOM925/MemeApp \n',
-        'description': "- Innovative and fun Android application developed using Kotlin \n"
-                       "- Utilizes Android development tools and Glide library \n"
-                       "- Delivers a never-ending stream of hilarious memes \n"
-                       "- Sourced from Reddit's API through Retrofit"
+        'description': " - Innovative and fun Android application developed using Kotlin \n"
+                       " - Utilizes Android development tools and Glide library \n"
+                       " - Delivers a never-ending stream of hilarious memes \n"
+                       " - Sourced from Reddit's API through Retrofit"
     }
 }
 
