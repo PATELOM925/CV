@@ -148,6 +148,15 @@ st.write(
     :pushpin: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
     - let's user retrieve necessary information from PDF (Q/A chatbot).
     - Accuracy rate over 80% and Empowers them to make informed discussion.
+
+    :lightbulb: [**Autograder**](https://github.com/PATELOM925/AutoGrader) - Precision In Every Grade
+    - Automated grading system for teachers and professors.
+    - Integration of BERT-Uncased for NLP-based grading, along with Spacy & PyTessearch for Image processing.
+    - Ensures accuracy in assessing diverse exam formats.
+
+    :lightbulb: [**Meme App**](https://github.com/PATELOM925/MemeApp) - Laughter Just A Click Away
+    - Innovative and fun Android application developed using Kotlin and Sourced from Reddit's API through Retrofit.
+    - Utilizes Android development tools and Glide library to Deliver a never-ending stream of hilarious memes. 
     '''
 )
 
