@@ -36,22 +36,22 @@ SOCIAL_MEDIA = {
 PROJECTS = {
     'SQl AI - Access Database In Your Language \n': {
         'url': 'https://github.com/PATELOM925/SQL-AI',
-        'description': "Users can upload SQL databases \n",
-                       "Implements advanced natural language prompts \n",
+        'description': "Users can upload SQL databases \n"
+                       "Implements advanced natural language prompts \n"
                        "Transforms input into precise SQL queries"
     },
      'ChatPDF AI - Talk With Your PDFs \n': {
         'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
-        'description': "- Leverages advanced NLP techniques \n",
-                       "- Integration with Streamlit Cloud for streamlined PDF analysis \n",
-                       "- Achieves an impressive 89% accuracy rate \n",
+        'description': "- Leverages advanced NLP techniques \n"
+                       "- Integration with Streamlit Cloud for streamlined PDF analysis \n"
+                       "- Achieves an impressive 89% accuracy rate \n"
                        "- Empowers users in making informed decisions faster"
     },
     'Autograder - Precision In Every Grade \n': {
         'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker',
-        'description': "- Automated grading system for teachers and professors \n",
-                       "- Integration of BERT-Uncased for NLP-based grading \n",
-                       "- Utilizes Spacy & PyTesseract for image processing \n",
+        'description': "- Automated grading system for teachers and professors \n"
+                       "- Integration of BERT-Uncased for NLP-based grading \n"
+                       "- Utilizes Spacy & PyTesseract for image processing \n"
                        "- Ensures accuracy in assessing diverse exam formats"
     },
     'Meme App': {
@@ -108,37 +108,6 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
 
 
 st.write('#')
-# st.subheader('Skills')
-
-# cols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Programming Languages</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">Python, Java, C, HTML+CSS</p>', unsafe_allow_html=True)
-
-# cols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Databases</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">MySQL, MongoDB, SQLite, Firebase</p>', unsafe_allow_html=True)
-
-# cols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Libraries/Frameworks</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract</p>', unsafe_allow_html=True)
-
-# cols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Developer Tools</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">GIT, GITHUB, GOOGLE COLLAB, GCP, INTELLIJ, MICROSOFT OFFICE, ASANA, AI TOOLS, COMPASS, WORKBENCH</p>', unsafe_allow_html=True)
-
-# cols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Areas of Interest</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">DATA SCIENCE, DATA ANALYST, ML-OPS, BIG DATA ANALYST, QUANTITATIVE ANALYST</p>', unsafe_allow_html=True)
-
-# cols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Soft Skills</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">AVID LISTENER, PROBLEM SOLVING, FAST-LEARNER,TEAM LEADERSHIP, ADAPTIVE</p>', unsafe_allow_html=True)
-
-# ols = st.columns(2, gap='small')
-# cols[0].markdown('<p style="margin-bottom: -10px;"><strong>Hands in Emerging Tech</strong></p>', unsafe_allow_html=True)
-# cols[1].markdown('<p style="margin-bottom: -10px;">LANGCHAIN, LLAMAINDEX, GENERATIVE AI</p>', unsafe_allow_html=True)
-
-# Skills Table
 st.subheader('Skills')
 
 # Data for the skills table
