@@ -224,22 +224,18 @@ st.write(
 st.write('#')
 st.subheader('Projects')
 for project, content in PROJECTS.items():
-    st.write(f'* **[{project}]({content["url"]})**: {content["description"]}')
+    st.write(f'* **[{project}]({content["url"]})**  \n {content["description"]}')
 
-# # ---ACHIEVEMENTS---
-# st.write('#')
-# st.subheader('Achievements')
-# st.write(
-# '''
-# - Filed 1 *Provisional Design Patent* and 1 *Provisional Product Patent* under Indian Patent Office
-# - Amongst [top 4%](https://quine.sh/user/Kunal-Kumar-Sahoo) developers wordwide (Python, rank 115) on *Quine.sh*
-# - Within top 10 best projects in University-level Smart India Hackathon, 2023
-# - Received funding of **225K INR** for project idea under SSIP Policy
-# - Won **150K INR** as prize money in *Robofest 3.0*
-# - Second runner-up at *EnCode hackathon* at IIT Guwahati (sponsor: **Bosch**)
-# - Grand finalist of *Azadi ka Amrit Mahotsav Hackathon 2022*, organized by Govt. of Gujarat
-# '''
-# )
+# ---ACHIEVEMENTS---
+st.write('#')
+st.subheader('Certifications')
+st.write(
+'''
+- [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
+- [Langchain Chat With Your Data] (https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
+- [Excel for Beginners Excel for Beginners] (https://olympus.mygreatlearning.com/courses/12583/certificate)
+'''
+)
  
 # Learnt From
 st.write('#')
