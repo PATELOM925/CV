@@ -34,7 +34,7 @@ SOCIAL_MEDIA = {
 # }
 
 PROJECTS = {
-    'ChatPDF AI - Talk With Your PDFs\n': {
+    ':pushpin ChatPDF AI - Talk With Your PDFs\n': {
         'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
         'description': "- Leverages advanced NLP techniques\n"
                        "- Integration with Streamlit Cloud for streamlined PDF analysis\n"
@@ -221,10 +221,25 @@ st.write(
 )
 
 # --- PROJECTS ---
+# st.write('#')
+# st.subheader('Projects')
+# for project, content in PROJECTS.items():
+#     st.write(f'* **[{project}]({content["url"]})**: {content["description"]}')
+
 st.write('#')
 st.subheader('Projects')
 for project, content in PROJECTS.items():
-    st.write(f'* **[{project}]({content["url"]})**: {content["description"]}')
+    project_name = f'**[{project.split(" - ")[0]}]**'  # Extracting project name and making it bold
+    project_description = project.split(" - ")[1]  # Extracting project description
+    project_url = content["url"]
+    description_bullet_points = content["description"]
+    
+    # Formatting description as bullet points
+    description_bullet_points = "\n".join([f"- {point}" for point in description_bullet_points.split("\n")])
+    
+    st.write(f'* {project_name} - {project_description}\n'
+             f'  * [{project_description}]({project_url})\n'
+             f'  * {description_bullet_points}\n')
 
 # # ---ACHIEVEMENTS---
 # st.write('#')
