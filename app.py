@@ -22,7 +22,7 @@ SOCIAL_MEDIA = {
     'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://www.linkedin.com/in/om-m-patel-b539b8213/',
     'https://www.svgrepo.com/show/489456/email.svg': 'mailto:iampatelom@gmail.com',
     'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
-    'https://www.svgrepo.com/svg/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
+    'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
 }
 
 # PROJECTS = {
