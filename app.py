@@ -55,7 +55,7 @@ profile_pic = Image.open(profile_pic)
 col1, col2 = st.columns(2, gap='small')
 
 with col1:
-    st.image(profile_pic, width=321 , channels='RGB', use_column_width=True)
+    st.image(profile_pic, width=200 , channels='RGB', use_column_width=True)
 
 with col2:
     st.title(NAME)
