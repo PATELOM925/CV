@@ -142,6 +142,11 @@ st.write('#')
 st.subheader('Projects')
 st.write(
     '''
+    :computer:[**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
+    - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc)
+    - Performed EDA showcasing diverse graphs and model evaluation metrics
+
+    
     :computer: [**SQl AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
     - Allows Users to upload SQL databases and Access them in Natural Language prompts.
     - Transforms input into precise SQL queries with  an accuracy over *90%*.
