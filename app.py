@@ -51,11 +51,21 @@ with open(resume_file, 'rb') as pdf_file:
 profile_pic = Image.open(profile_pic)
 
 
+# # --- HERO SECTION ---
+# col1, col2 = st.columns(2, gap='small')
+
+# with col1:
+#     st.image(profile_pic,channels='RGB', use_column_width=True)
+
+profile_pic = Image.open(profile_pic)
+profile_pic.thumbnail((200, 300))
+
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
 
 with col1:
-    st.image(profile_pic, width=200 , channels='RGB', use_column_width=True)
+    st.image(profile_pic, channels='RGB', use_column_width=True)
+
 
 with col2:
     st.title(NAME)
