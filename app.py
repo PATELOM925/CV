@@ -4,7 +4,7 @@ from PIL import Image
 import pandas as pd
 
 
-# --- PATH SETTINGS ---
+# --- PATH SETTINGS --- 
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
 # css_file = current_directory / 'styles' / 'main.css'
 resume_file = current_directory / 'details' / 'Resume_CV_OM_M_Patel.pdf'
