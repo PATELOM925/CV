@@ -50,6 +50,18 @@ with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
+# --- Custom CSS ---
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #E6F7FF;
+        padding: 10px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
