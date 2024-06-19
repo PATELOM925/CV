@@ -49,24 +49,12 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
-
-# --- Custom CSS ---
 st.markdown(
     """
     <style>
     .stApp {
-        background-color: #E6F7FF;
+        background-color: #022333;
         padding: 10px;
-    }
-    .profile-pic {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-    }
-    .social-icon {
-        width: 42px;
-        height: 42px;
     }
     </style>
     """,
