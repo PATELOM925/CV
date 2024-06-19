@@ -48,8 +48,7 @@ st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 # --- LOAD PDF & PROFILE PIC ---
 with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
-
-
+profile_pic = Image.open(profile_pic)
 st.markdown(
     """
     <style>
@@ -143,7 +142,7 @@ cols[3].write('Percentile: 96%')
 #     - Major Skills Used: Adobe Premiere Pro, Canva, Social Media Marketing
 # - 📌 Graphic Designer  @ Aasan Study (Mar 2020 -- Feb 2022)
 #     - Created engaging Educational Content for the website(https://aasanstudy.com/)
-#     - Designed Graphics for educational posts for Instagram, youtube and website.
+#     - Designed Graphics for educational posts for Instagram, YouTube and website.
 #     - Major Skills USed: Adobe Photoshop, Adobe Illustrator, Web Content Writing'''
 # )
 
@@ -259,3 +258,5 @@ st.write(
 
 '''
 )
+
+
