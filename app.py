@@ -45,24 +45,9 @@ Learnt_From = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
-# # --- LOAD PDF & PROFILE PIC ---
-# with open(resume_file, 'rb') as pdf_file:
-#     PDFbyte = pdf_file.read()
-
-def circular(image):
-    mask = Image.new("L", image.size, 0)
-    draw = ImageDraw.Draw(mask)
-    draw.ellipse((0, 0) + image.size, fill=255)
-    result = ImageOps.fit(image, mask.size, centering=(0.5, 0.5))
-    result.putalpha(mask)
-    return result
-
 # --- LOAD PDF & PROFILE PIC ---
 with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
-# Load and process profile picture
-profile_pic = Image.open(profile_pic_path)
-profile_pic = circular(profile_pic)
 
 
 st.markdown(
@@ -77,7 +62,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# --- HERO SECTION ---
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
 
