@@ -60,8 +60,6 @@ def circular(image):
 # --- LOAD PDF & PROFILE PIC ---
 with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
-    PDFbyte = pdf_file.read()
-
 # Load and process profile picture
 profile_pic = Image.open(profile_pic_path)
 profile_pic = circular(profile_pic)
