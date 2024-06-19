@@ -55,14 +55,25 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #052e41;
+        background-color: #E6F7FF;
         padding: 10px;
+    }
+    .profile-pic {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .social-icon {
+        width: 42px;
+        height: 42px;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
 
+# --- HERO SECTION ---
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
 
