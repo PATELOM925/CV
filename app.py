@@ -83,10 +83,10 @@ skills_data = [
     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
     ('Databases', 'MySQL, MongoDB, SQLite, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-    ('Developer Tools', 'GIT, GITHUB, GOOGLE COLLAB, GCP, INTELLIJ, MICROSOFT OFFICE, ASANA, AI TOOLS, COMPASS, WORKBENCH'),
+    ('Developer Tools', 'GIT, GITHUB, GOOGLE COLLAB, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH'),
     ('Areas of Interest', 'DATA SCIENCE, DATA ANALYST, ML-OPS, BIG DATA ANALYST, QUANTITATIVE ANALYST'),
     ('Soft Skills', 'AVID LISTENER, PROBLEM SOLVING, FAST-LEARNER, TEAM LEADERSHIP, ADAPTIVE'),
-    ('Hands in Emerging Tech', 'LANGCHAIN, LLAMAINDEX, GENERATIVE AI'),
+    ('Hands in Emerging Tech', 'LANGCHAIN, LLAMAINDEX, GENERATIVE AI, NLP'),
 ]
 index = ['A','B','C','D','E','F','G']
 # Create a DataFrame without index and header
@@ -145,7 +145,6 @@ st.write(
     :computer:[**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
     - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc)
     - Performed EDA showcasing diverse graphs and model evaluation metrics
-
     
     :computer: [**SQl AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
     - Allows Users to upload SQL databases and Access them in Natural Language prompts.
@@ -194,6 +193,14 @@ st.write('#')
 st.subheader('**Experience**')
 st.write(
     '''
+
+:pushpin: **Data Science Intern @ Sharperly (Feb 2024 -- July 2024)**
+ - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs by 65%.
+ - Created a MongoDB database to store geo-coordinates, reducing server load by 134%.
+ - Enhanced location accuracy with a proximity search algorithm, ensuring recognition within a 10-meter range.
+ - Conducted data scraping for addresses using OpenStreetMap and Overpass Turbo.
+ - Managed code workflows with GitHub, and coordinated tasks and documentation using Jira and Confluence.
+ 
 :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
  - Successfully Learned Android Development in Kotlin and Built Apps/features.
  - Grateful to my team who taught me "Transforming Visions into Seamless Apps".
