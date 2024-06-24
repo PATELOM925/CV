@@ -322,13 +322,14 @@ st.markdown(
     .stApp {
         background-color: #ffcfcf;
         padding: 2px;
+        color: black;
     }
     body, h1, h2, h3, h4, h5, h6, p, div, span, table, .stMarkdown {
         color: black !important;
     }
     .stButton > button {
-        color: white !important;
-        background-color: black !important;
+        color: white;
+        background-color: black;
     }
     .stTable th, .stTable td {
         color: black !important;
