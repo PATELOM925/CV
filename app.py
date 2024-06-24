@@ -56,6 +56,9 @@ st.markdown(
         background-color: #e3e5fa;
         padding: 2px;
     }
+    body, h1, h2, h3, h4, h5, h6, p, div, span {
+        color: black !important;
+    }
     </style>
     """,
     unsafe_allow_html=True
