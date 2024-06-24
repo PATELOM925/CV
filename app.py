@@ -319,24 +319,27 @@ profile_pic = Image.open(profile_pic)
 st.markdown(
     """
     <style>
-    .stApp {
-        background-color: #e3e5fa;
-        padding: 2px;
-    }
     body, h1, h2, h3, h4, h5, h6, p, div, span, table, .stMarkdown {
         color: black !important;
     }
     .stButton > button {
-        color: black !important;
-        background-color: white !important;
+        color: white !important;
+        background-color: black !important;
     }
-    .stTable th, .stTable td, .stTable tr {
+    thead th, tbody th {
         color: black !important;
+    }
+    .stDataFrame thead tr, .stDataFrame tbody tr {
+        color: black !important;
+    }
+    .stApp {
+        background-color: #e3e5fa;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
