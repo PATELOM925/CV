@@ -322,9 +322,11 @@ st.markdown(
     .stApp {
         background-color: #e3e5fa;
         padding: 2px;
-        color: black;
     }
-    body, h1, h2, h3, h4, h5, h6, p, div, span {
+    body, h1, h2, h3, h4, h5, h6, p, div, span, table {
+        color: black !important;
+    }
+    table {
         color: black !important;
     }
     </style>
@@ -442,6 +444,25 @@ st.write(
 
 '''
 )
+
+# --- CERTIFICATIONS ---
+st.write('#')
+st.subheader('Certifications')
+st.write(
+    '''
+- [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
+- [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
+- [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
+'''
+)
+
+# --- LEARNT FROM ---
+st.write('#')
+st.subheader('Learnt From')
+for mentor, link in Learnt_From.items():
+    st.write(f'[{mentor}]({link})')
+
+
 
 # ---
 
