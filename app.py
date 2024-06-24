@@ -320,13 +320,17 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #e3e5fa;
+        background-color: #ffcfcf;
         padding: 2px;
     }
-    body, h1, h2, h3, h4, h5, h6, p, div, span, table {
+    body, h1, h2, h3, h4, h5, h6, p, div, span, table, .stMarkdown {
         color: black !important;
     }
-    table {
+    .stButton > button {
+        color: white !important;
+        background-color: black !important;
+    }
+    .stTable th, .stTable td {
         color: black !important;
     }
     </style>
