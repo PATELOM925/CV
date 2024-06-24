@@ -319,19 +319,14 @@ profile_pic = Image.open(profile_pic)
 st.markdown(
     """
     <style>
-    .stApp {
-        background-color: #ffcfcf;
-        padding: 2px;
-        color: black;
-    }
     body, h1, h2, h3, h4, h5, h6, p, div, span, table, .stMarkdown {
         color: black !important;
     }
     .stButton > button {
-        color: white;
-        background-color: black;
+        color: white !important;
+        background-color: black !important;
     }
-    .stTable th, .stTable td {
+    .stTable th, .stTable td, .stTable tr {
         color: black !important;
     }
     </style>
