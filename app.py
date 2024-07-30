@@ -324,7 +324,7 @@ st.markdown(
     }
     .stButton > button {
         color: white !important;
-        background-color: black !important;
+        background-color: white;
     }
     thead th, tbody th {
         color: black !important;
