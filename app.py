@@ -372,7 +372,7 @@ skills_data = [
     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
     ('Databases', 'MySQL, MongoDB, SQLite, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-    ('Developer Tools', 'GIT, GITHUB, GOOGLE COLLAB, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH'),
+    ('Developer Tools', 'GIT, GITHUB, DOCKER, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH'),
     ('Areas of Interest', 'DATA SCIENCE, DATA ANALYST, ML-OPS, BIG DATA ANALYST, QUANTITATIVE ANALYST'),
     ('Soft Skills', 'AVID LISTENER, PROBLEM SOLVING, FAST-LEARNER, TEAM LEADERSHIP, ADAPTIVE'),
     ('Hands in Emerging Tech', 'LANGCHAIN, LLAMAINDEX, GENERATIVE AI, NLP'),
@@ -389,12 +389,12 @@ st.write('#')
 st.subheader('**Experience**')
 st.write(
     '''
-:pushpin: **Data Science Intern @ Sharperly (Feb 2024 -- July 2024)**
- - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs by 65%.
- - Created a MongoDB database to store geo-coordinates, reducing server load by 134%.
- - Enhanced location accuracy with a proximity search algorithm, ensuring recognition within a 10-meter range.
- - Conducted data scraping for addresses using OpenStreetMap and Overpass Turbo.
- - Managed code workflows with GitHub, and coordinated tasks and documentation using Jira and Confluence.
+:pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
+ - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs upto 55%.
+ - Scraped and processed address data using Overpass Turbo, Beautiful Soup, and Selenium.
+ - Performed exploratory data analysis (EDA) on geospatial datasets, Contributed to training machine learning models for geospatial analysis by leveraging KNN and other algorithms.
+ - Optimized MongoDB databases to store data, and further contributed to authentication and credit management systems for APIs.
+ - Collaborated code workflows with GitHub, coordinated tasks and documentation using Jira and Confluence
  
 :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
  - Successfully Learned Android Development in Kotlin and Built Apps/features.
@@ -418,13 +418,17 @@ st.write('#')
 st.subheader('Projects')
 st.write(
     '''
+    :computer:[**Driver Pay Forecasting**](https://github.com/PATELOM925/Uber_NYC_Driver_Pay_Prediction) - Uber NYC Driver Pay Prediction
+    - Implemented machine learning and deep learning models (ANN, Random Forest, LSTM, BiLSTM,LSTM+GRU) and performed comparative analysis for pay prediction
+    - Analyzed and Visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using PowerBI.
+    
     :computer:[**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
     - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc)
     - Performed EDA showcasing diverse graphs and model evaluation metrics
     
     :computer: [**SQl AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
     - Allows Users to upload SQL databases and Access them in Natural Language prompts.
-    - Transforms input into precise SQL queries with  an accuracy over *90%*.
+    - Transforms input into precise SQL queries with  an accuracy over *80%*.
 
     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
     - let's user retrieve necessary information from PDF (Q/A chatbot).
@@ -446,7 +450,7 @@ st.write('#')
 st.subheader('Co-Curricular Activities')
 st.write(
     '''
-- **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU*(May 2023 - Present)
+- **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU*(June 2023 - June 2024)
 - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/) - The Sanskrit Club of PDEU*(May 2022 - May 2023)
 
 '''
@@ -457,9 +461,12 @@ st.write('#')
 st.subheader('Certifications')
 st.write(
     '''
+- [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
+- [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
 - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
 - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
 - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
+
 '''
 )
 
