@@ -69,7 +69,7 @@ st.markdown(
     }
     .stTable {
         color: white;
-        background-color: #1DB954;
+        background-color: ##FFFFFF;
         border-color: #1DB954;
     }
     a {
