@@ -5,13 +5,13 @@ import pandas as pd
 
 # --- PATH SETTINGS --- 
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-resume_file = current_directory / 'details' / 'Om_M_Patel_Resume_July24.pdf'
+resume_file = current_directory / 'details' / 'OM_CV.pdf.pdf'
 profile_pic = current_directory / 'details' / 'Profile Photo - Om Patel.png'
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = 'CV | OM M PATEL'
+PAGE_TITLE = 'CV | OMKUMAR MITESHBHAI PATEL'
 PAGE_ICON = ':rocket:'
-NAME = 'OM M PATEL'
+NAME = 'OMKUMAR MITESHBHAI PATEL'
 DESCRIPTION = '''Diving Deep in Data'''
 EMAIL = 'iampatelom@gmail.com'
 
