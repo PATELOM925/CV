@@ -5,7 +5,7 @@ import pandas as pd
 
 # --- PATH SETTINGS --- 
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-resume_file = current_directory / 'details' / 'OM_CV.pdf.pdf'
+resume_file = current_directory / 'details' / 'OM_CV.pdf'
 profile_pic = current_directory / 'details' / 'Profile Photo - Om Patel.png'
 
 # --- GENERAL SETTINGS ---
