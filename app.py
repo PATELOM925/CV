@@ -39,49 +39,107 @@ with open(resume_file, 'rb') as pdf_file:
 profile_pic = Image.open(profile_pic)
 
 # --- CUSTOM CSS ---
+# --- CUSTOM CSS ---
 st.markdown(
     """
     <style>
     body {
+        font-family: 'Arial', sans-serif;
         color: white;
-        background-color: #121212;
+        background: linear-gradient(135deg, #0b3d91, #1f65cc);
     }
     .stApp {
-        background-color: #121212;
+        background: linear-gradient(135deg, #0b3d91, #1f65cc);
+        color: white;
     }
     .stButton > button {
         color: white;
-        background-color: #1DB954;
+        background-color: #ffd700; /* Golden yellow */
         border: none;
-        border-radius: 4px;
+        border-radius: 8px;
+        padding: 8px 16px;
+        font-size: 16px;
+        font-weight: bold;
     }
     .stButton > button:hover {
-        background-color: #1ED760;
+        background-color: #ffc300;
+        color: navy;
     }
     .stTitle, .stHeader, .stSubheader {
-        color: #1DB954;
+        color: #ffd700; /* Golden yellow */
     }
-    .stMarkdown {
-        color: white;
+    .stMarkdown a {
+        color: #ffd700;
+        text-decoration: none;
+    }
+    .stMarkdown a:hover {
+        color: #ffc300;
+        text-decoration: underline;
     }
     .stImage > img {
         border-radius: 50%;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
     }
     .stTable {
+        background-color: #0b3d91;
         color: white;
-        background-color: ##FFFFFF;
-        border-color: #1DB954;
+        border-collapse: collapse;
     }
-    a {
-        color: #1DB954;
+    .stTable th {
+        color: #ffd700;
     }
-    a:hover {
-        color: #1ED760;
+    .stTable td {
+        color: white;
+        border-top: 1px solid #1f65cc;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# st.markdown(
+#     """
+#     <style>
+#     body {
+#         color: white;
+#         background-color: #121212;
+#     }
+#     .stApp {
+#         background-color: #121212;
+#     }
+#     .stButton > button {
+#         color: white;
+#         background-color: #1DB954;
+#         border: none;
+#         border-radius: 4px;
+#     }
+#     .stButton > button:hover {
+#         background-color: #1ED760;
+#     }
+#     .stTitle, .stHeader, .stSubheader {
+#         color: #1DB954;
+#     }
+#     .stMarkdown {
+#         color: white;
+#     }
+#     .stImage > img {
+#         border-radius: 50%;
+#     }
+#     .stTable {
+#         color: white;
+#         background-color: ##FFFFFF;
+#         border-color: #1DB954;
+#     }
+#     a {
+#         color: #1DB954;
+#     }
+#     a:hover {
+#         color: #1ED760;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
