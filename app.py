@@ -48,7 +48,7 @@ st.markdown(
     color: #e0e0e0; /* Light grey text for readability */
     background: linear-gradient(180deg, #030f4f, #5d3d94 100%);
     background-attachment: fixed; /* Ensures gradient effect moves with scrolling */
-    transition: background 0.3s ease-in-out;
+    transition: background 0.5s ease-in-out;
 }
 
 .scrolled {
@@ -100,11 +100,7 @@ st.markdown(
         border-top: 1px solid #0b3d91;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
-st.markdown(
-    """
+
     <script>
     document.addEventListener('scroll', function () {
         const body = document.querySelector('body');
