@@ -59,20 +59,19 @@ st.markdown(
     color: #e0e0e0;
 }
 
-    .stDownloadButton > button {
-        color: #222; /* Darker font color for text */
-        background-color: #444; /* Dark grey background */
+    .stDownloadButton > button {{
+        color: #222;  /* Darker font color for text */
+        background-color: {background_color};  /* Same as web app background */
         border: none;
         border-radius: 8px;
         padding: 8px 16px;
         font-size: 16px;
         font-weight: bold;
-    }
-    .stDownloadButton > button:hover {
-        background-color: #222; /* Even darker background on hover */
-        color: #ffd700; /* Golden yellow for hover contrast */
-    }
-
+    }}
+    .stDownloadButton > button:hover {{
+        background-color: #222;  /* Darker background on hover */
+        color: #ffd700;  /* Golden yellow for hover contrast */
+    }}
 
 
     .stButton > button {
