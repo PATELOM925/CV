@@ -108,16 +108,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown( """ <script>
+st.markdown(
+    """
+    <style>
+    body { background-color: #f8f9fa; }
+    </style>
+    <script>
     document.addEventListener('scroll', function () {
         const body = document.querySelector('body');
-        if (window.scrollY > 10) { // Adjust threshold as needed
+        if (window.scrollY > 10) {
             body.classList.add('scrolled');
         } else {
             body.classList.remove('scrolled');
         }
     });
-    </script> """)
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
 # st.markdown(
 #     """
 #     <style>
