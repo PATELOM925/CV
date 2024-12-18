@@ -99,22 +99,25 @@ st.markdown(
         color: #e0e0e0;
         border-top: 1px solid #0b3d91;
     }
+
+    
     </style>
 
-    <script>
+   
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown( """ <script>
     document.addEventListener('scroll', function () {
         const body = document.querySelector('body');
-        if (window.scrollY > 50) { // Adjust threshold as needed
+        if (window.scrollY > 10) { // Adjust threshold as needed
             body.classList.add('scrolled');
         } else {
             body.classList.remove('scrolled');
         }
     });
-    </script>
-    """,
-    unsafe_allow_html=True
-)
-
+    </script> """)
 # st.markdown(
 #     """
 #     <style>
