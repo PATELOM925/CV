@@ -87,7 +87,7 @@ st.markdown(
 col1, col2 = st.columns(2, gap='small')
 
 with col1:
-    st.image(profile_pic, width=300, use_column_width=True)
+    st.image(profile_pic, width=300, use_container_width=True)
 
 with col2:
     st.title(NAME)
