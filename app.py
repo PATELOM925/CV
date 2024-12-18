@@ -46,10 +46,10 @@ st.markdown(
     body {
         font-family: 'Arial', sans-serif;
         color: #e0e0e0; /* Light grey text for readability */
-        background: linear-gradient(135deg, #030f4f, #0b3d91); /* Darker blue gradient */
+        background: linear-gradient(#030f4f, #5d3d94); /* Darker blue gradient */
     }
     .stApp {
-        background: linear-gradient(135deg, #030f4f, #0b3d91);
+        background: linear-gradient(#030f4f, #5d3d94);
         color: #e0e0e0;
     }
     .stButton > button {
