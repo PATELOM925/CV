@@ -44,14 +44,21 @@ st.markdown(
     """
     <style>
     body {
-        font-family: 'Arial', sans-serif;
-        color: #e0e0e0; /* Light grey text for readability */
-        background: linear-gradient(#030f4f, #5d3d94); /* Darker blue gradient */
-    }
-    .stApp {
-        background: linear-gradient(#030f4f, #5d3d94);
-        color: #e0e0e0;
-    }
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0; /* Light grey text for readability */
+    background: linear-gradient(180deg, #030f4f, #5d3d94 100%);
+    background-attachment: fixed; /* Ensures gradient effect moves with scrolling */
+    transition: background 0.3s ease-in-out;
+}
+
+.scrolled {
+    background: linear-gradient(180deg, #5d3d94, #030f4f 100%);
+}
+.stApp {
+    background: transparent; /* Inherits body background */
+    color: #e0e0e0;
+}
+
     .stButton > button {
         color: white;
         background-color: #444; /* Dark grey */
