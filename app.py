@@ -46,7 +46,7 @@ st.markdown(
     body {
         font-family: 'Arial', sans-serif;
         color: white;
-        background: linear-gradient(135deg, #0b3d91, #1f65cc);
+        background: linear-gradient(135deg, #030f4f, #0b3d91);
     }
     .stApp {
         background: linear-gradient(135deg, #0b3d91, #1f65cc);
