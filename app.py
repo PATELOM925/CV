@@ -99,7 +99,6 @@ st.markdown(
         color: #e0e0e0;
         border-top: 1px solid #0b3d91;
     }
-
     
     </style>
 
