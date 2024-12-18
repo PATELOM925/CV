@@ -39,22 +39,22 @@ with open(resume_file, 'rb') as pdf_file:
 profile_pic = Image.open(profile_pic)
 
 # --- CUSTOM CSS ---
-# --- CUSTOM CSS ---
+# --- CUSTOM CSS ---  background: linear-gradient(135deg, #030f4f, #0b3d91);
 st.markdown(
     """
     <style>
     body {
         font-family: 'Arial', sans-serif;
-        color: white;
-        background: linear-gradient(135deg, #030f4f, #0b3d91);
+        color: #e0e0e0; /* Light grey text for readability */
+        background: linear-gradient(135deg, #030f4f, #0b3d91); /* Darker blue gradient */
     }
     .stApp {
-        background: linear-gradient(135deg, #0b3d91, #1f65cc);
-        color: white;
+        background: linear-gradient(135deg, #030f4f, #0b3d91);
+        color: #e0e0e0;
     }
     .stButton > button {
         color: white;
-        background-color: #ffd700; /* Golden yellow */
+        background-color: #444; /* Dark grey */
         border: none;
         border-radius: 8px;
         padding: 8px 16px;
@@ -62,8 +62,8 @@ st.markdown(
         font-weight: bold;
     }
     .stButton > button:hover {
-        background-color: #ffc300;
-        color: navy;
+        background-color: #222; /* Even darker grey */
+        color: #ffd700; /* Golden yellow for hover contrast */
     }
     .stTitle, .stHeader, .stSubheader {
         color: #ffd700; /* Golden yellow */
@@ -78,25 +78,24 @@ st.markdown(
     }
     .stImage > img {
         border-radius: 50%;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9); /* Darker shadow */
     }
     .stTable {
-        background-color: #0b3d91;
-        color: white;
+        background-color: #030f4f; /* Match the darker theme */
+        color: #e0e0e0;
         border-collapse: collapse;
     }
     .stTable th {
         color: #ffd700;
     }
     .stTable td {
-        color: white;
-        border-top: 1px solid #1f65cc;
+        color: #e0e0e0;
+        border-top: 1px solid #0b3d91;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-
 # st.markdown(
 #     """
 #     <style>
