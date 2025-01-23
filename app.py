@@ -1,7 +1,7 @@
 from pathlib import Path
 import streamlit as st
 from PIL import Image
-import pandas as pd
+import pandas as pd 
 
 # --- PATH SETTINGS --- 
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
