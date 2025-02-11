@@ -169,12 +169,12 @@ skills_data = [
     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
     ('Databases', 'MySQL, MongoDB, PostgreSQL, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-    ('Developer Tools', 'GIT, GITHUB, DOCKER, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH','POSTMAN'),
+    ('Developer Tools', 'Git, Github, Docker, AWS, Microsoft Office, Asana, Confluence, JIRA, AI Tools, Compass, Workbench','Postman'),
     ('Areas of Interest', 'Natural Language Processing (NLP)' 'LangChain', 'LLMs',  'Generative AI'),
     ('Soft Skills', 'Avid listener, Critical Thinking, Problem-Solving'),
 ]
-index = ['A', 'B', 'C', 'D', 'E', 'F']
-skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'], index=index)
+# index = ['A', 'B', 'C', 'D', 'E', 'F']
+skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'])
 
 st.table(skills_df)
 
@@ -262,13 +262,6 @@ st.write(
 - **Volunteer** @ *Vardaan Foundation, Vadodara* - Civic and Social Internship: Taught digital literacy to underprivileged students (June 2022 - July 2022)
     '''
 )
-# st.write(
-#     '''
-# - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU*(June 2023 - June 2024)
-# - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/) - The Sanskrit Club of PDEU*(May 2022 - May 2023)
-
-# '''
-# )
 
 # --- CERTIFICATIONS ---
 st.write('#')
