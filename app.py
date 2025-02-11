@@ -9,7 +9,7 @@ resume_file = current_directory / 'details' / 'Om_Resume.pdf'
 profile_pic = current_directory / 'details' / 'Profile Photo - Om Patel.png'
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = 'CV | OMKUMAR MITESHBHAI PATEL'
+PAGE_TITLE = 'CV | OM M. PATEL'
 PAGE_ICON = ':rocket:'
 NAME = 'OMKUMAR MITESHBHAI PATEL'
 DESCRIPTION = '''Diving Deep in Data'''
@@ -38,8 +38,6 @@ with open(resume_file, 'rb') as pdf_file:
     PDFbyte = pdf_file.read()
 profile_pic = Image.open(profile_pic)
 
-# --- CUSTOM CSS ---
-# --- CUSTOM CSS ---  background: linear-gradient(135deg, #030f4f, #0b3d91);
 st.markdown(
     """
     <style>
@@ -141,50 +139,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# st.markdown(
-#     """
-#     <style>
-#     body {
-#         color: white;
-#         background-color: #121212;
-#     }
-#     .stApp {
-#         background-color: #121212;
-#     }
-#     .stButton > button {
-#         color: white;
-#         background-color: #1DB954;
-#         border: none;
-#         border-radius: 4px;
-#     }
-#     .stButton > button:hover {
-#         background-color: #1ED760;
-#     }
-#     .stTitle, .stHeader, .stSubheader {
-#         color: #1DB954;
-#     }
-#     .stMarkdown {
-#         color: white;
-#     }
-#     .stImage > img {
-#         border-radius: 50%;
-#     }
-#     .stTable {
-#         color: white;
-#         background-color: ##FFFFFF;
-#         border-color: #1DB954;
-#     }
-#     a {
-#         color: #1DB954;
-#     }
-#     a:hover {
-#         color: #1ED760;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
 
@@ -213,14 +167,13 @@ st.subheader('Skills')
 
 skills_data = [
     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
-    ('Databases', 'MySQL, MongoDB, SQLite, Firebase'),
+    ('Databases', 'MySQL, MongoDB, PostgreSQL, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-    ('Developer Tools', 'GIT, GITHUB, DOCKER, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH'),
-    ('Areas of Interest', 'DATA SCIENCE, DATA ANALYST, ML-OPS, BIG DATA ANALYST, QUANTITATIVE ANALYST'),
-    ('Soft Skills', 'AVID LISTENER, PROBLEM SOLVING, FAST-LEARNER, TEAM LEADERSHIP, ADAPTIVE'),
-    ('Hands in Emerging Tech', 'LANGCHAIN, LLAMAINDEX, GENERATIVE AI, NLP'),
+    ('Developer Tools', 'GIT, GITHUB, DOCKER, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH','POSTMAN'),
+    ('Areas of Interest', 'Natural Language Processing (NLP)' 'LangChain', 'LLMs',  'Generative AI'),
+    ('Soft Skills', 'Avid listener, Critical Thinking, Problem-Solving'),
 ]
-index = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+index = ['A', 'B', 'C', 'D', 'E', 'F']
 skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'], index=index)
 
 st.table(skills_df)
@@ -230,16 +183,23 @@ st.write('#')
 st.subheader('**Experience**')
 st.write(
     '''
+
+:pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
+ - Enhanced and managed scalable data pipelines for geospatial data processing, improving ETL processes for data flows increasing training efficiency by 36%
+ - Containerized the application with Docker and deployed it on cloud platforms (Render/AWS), achieving consistent performance and scalability
+ - Led integration efforts to support the platform’s credit management and routing workflows
+ - Collaborated with cross-functional teams and stakeholders using GitHub, Jira, & Confluence to drive technical documentation and business needs
+
 :pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
  - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs up to 55%.
- - Scraped and processed address data using Overpass Turbo, Beautiful Soup, and Selenium.
+ - Scraped and processed 10,000 plus address data using Overpass Turbo, Beautiful Soup, and Selenium.
  - Performed exploratory data analysis (EDA) on geospatial datasets, contributed to training machine learning models for geospatial analysis by leveraging KNN and other algorithms.
  - Optimized MongoDB databases to store data, and further contributed to authentication and credit management systems for APIs.
- - Collaborated code workflows with GitHub, coordinated tasks and documentation using Jira and Confluence.
  
 :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
- - Successfully learned Android Development in Kotlin and built apps/features.
- - Grateful to my team who taught me "Transforming Visions into Seamless Apps".
+ - Assisted in UI improvements and API integration, leading to a 23% increase in user engagement.
+ - Implemented web scraping using Python, Beautiful Soup, and Selenium, increasing data acquisition efficiency by 18%.
+ - Created apps in Kotlin, integrated libraries like Glide, Retrofit and Firebase resulting in a 20% reduction of crash rates and improved asynchronous operations.
  - Major Skills Used: REST APIs, Firebase, Kotlin, Azure Blob, MySQL.
 
 :pushpin: **Creator @ ASK OM PATEL (Nov 2021 -- July 2022)**
@@ -259,6 +219,11 @@ st.write('#')
 st.subheader('Projects')
 st.write(
     '''
+    :computer: [**Legal Clarity**](https://github.com/PATELOM925/Legal_Clarity) - Simplifying Legal Documents
+    - Developed and deployed a containerized NLP Flask application for legal document processing.
+    - Implemented advanced transformer-based models (Pegasus, T5, IndicBARTSS) using PyTorch and Hugging Face Transformers to enable multi-language legal text summarization and translation.
+    - Optimized model inference and API performance by integrating tokenization with SentencePiece, efficient caching, and asynchronous Flask request handling.
+    
     :computer: [**Driver Pay Forecasting**](https://github.com/PATELOM925/Uber_NYC_Driver_Pay_Prediction) - Uber NYC Driver Pay Prediction
     - Implemented machine learning and deep learning models (ANN, Random Forest, LSTM, BiLSTM, LSTM+GRU) and performed comparative analysis for pay prediction.
     - Analyzed and visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using PowerBI.
@@ -272,13 +237,12 @@ st.write(
     - Transforms input into precise SQL queries with an accuracy over 80%.
 
     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
-    - Lets users retrieve necessary information from PDF (Q/A chatbot).
-    - Accuracy rate over 80% and empowers them to make informed decisions.
+    - Enhanced productivity and decision-making in document analysis with 77% accuracy using NLP, Streamlit, LangChain, PyPDF2, and FAISS for an efficient retrieval system.(RAG System).
+    - Transformed document analysis with Google Generative AI, deploying the advanced system on Streamlit Cloud and enhancing the retrieval process.
 
     :computer: [**Autograder**](https://github.com/PATELOM925/AutoGrader) - Precision In Every Grade
-    - Automated grading system for teachers and professors.
-    - Integration of BERT-Uncased for NLP-based grading, along with Spacy & PyTessearch for image processing.
-    - Ensures accuracy in assessing diverse exam formats.
+    - Assisted a six-member team to develop an automated grading system, using React for the front end, Python with Flask for model integration, backend logic, and MongoDB for data storage.
+    - Achieved over 63% accuracy in grading by analyzing NLP with BERT-Uncased and employing Spacy and PyTesseract for image processing
 
     :computer: [**Meme App**](https://github.com/PATELOM925/MemeApp) - Laughter Just A Click Away
     - Innovative and fun Android application developed using Kotlin and sourced from Reddit's API through Retrofit.
@@ -288,7 +252,7 @@ st.write(
 
 # --- CO-CURRICULAR ACTIVITIES ---
 st.write('#')
-st.subheader('Co-Curricular Activities')
+st.subheader('Extracurriculars')
 st.write(
     '''
 - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
@@ -313,9 +277,12 @@ st.write(
     '''
 - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
 - [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
+- [LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)
+- [Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)
 - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
 - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
 - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
+- [C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)
 
 '''
 )
@@ -325,8 +292,6 @@ st.write('#')
 st.subheader('Learnt From')
 for mentor, link in Learnt_From.items():
     st.write(f'[{mentor}]({link})')
-
-
 
 
 
