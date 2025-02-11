@@ -2,7 +2,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import requests  
+import requests 
 
 # ----------------------------
 # PAGE CONFIGURATION & PATHS
@@ -38,7 +38,7 @@ Learnt_From = {
 }
 
 # ----------------------------
-# CSS 
+# CSS STYLING
 # ----------------------------
 st.markdown(
     """
@@ -111,9 +111,10 @@ st.markdown(
     .hero-col2 h5 {
       margin-bottom: 20px;
     }
+    /* Download Button adjustments */
     .stDownloadButton {
       margin-left: 20px;
-      margin-top: -43px;
+      margin-top: -57px;
     }
     .stDownloadButton > button {
       color: #222;
@@ -182,13 +183,14 @@ with col2:
         """,
         unsafe_allow_html=True
     )
+    st.markdown("</div>", unsafe_allow_html=True)
     st.download_button(
         label="📄 Download My Resume",
         data=PDFbyte,
         file_name=resume_file.name,
         mime="application/octet-stream"
     )
-    st.markdown("</div>", unsafe_allow_html=True)
+    
 
 # ----------------------------
 # SOCIAL LINKS SECTION
@@ -357,7 +359,7 @@ with st.form(key='contact_form'):
             form_data = {
                 "name": name_input,
                 "email": email_input,
-                "message": message_input 
+                "message": message_input
             }
             response = requests.post(
                 "https://formspree.io/f/xnnjbpve",  
