@@ -169,13 +169,12 @@ skills_data = [
     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
     ('Databases', 'MySQL, MongoDB, PostgreSQL, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-    ('Developer Tools', 'Git, Github, Docker, AWS, Microsoft Office, Asana, Confluence, JIRA, AI Tools, Compass, Workbench','Postman'),
+    ('Developer Tools', 'Git, Github, Docker, AWS, Microsoft Office, Asana, Confluence, JIRA, AI Tools, Compass, Workbench, Postman'),
     ('Areas of Interest', 'Natural Language Processing (NLP)' 'LangChain', 'LLMs',  'Generative AI'),
     ('Soft Skills', 'Avid listener, Critical Thinking, Problem-Solving'),
 ]
 # index = ['A', 'B', 'C', 'D', 'E', 'F']
 skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'])
-
 st.table(skills_df)
 
 # --- EXPERIENCE ---
@@ -183,7 +182,6 @@ st.write('#')
 st.subheader('**Experience**')
 st.write(
     '''
-
 :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
  - Enhanced and managed scalable data pipelines for geospatial data processing, improving ETL processes for data flows increasing training efficiency by 36%
  - Containerized the application with Docker and deployed it on cloud platforms (Render/AWS), achieving consistent performance and scalability
