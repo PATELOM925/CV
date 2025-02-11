@@ -112,7 +112,9 @@ st.markdown(
         color: #e0e0e0;
         border-top: 1px solid #0b3d91;
     }
-    
+    .stApp {
+    overflow: visible;
+}
     </style>
 
    
@@ -139,6 +141,63 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+
+#new edition 
+st.markdown(
+    """
+    <style>
+    /* Light Mode Styles */
+    body.light-mode {
+        color: #2d2d2d;
+        background: linear-gradient(180deg, #e6e1ff, #ffffff 100%);
+    }
+    body.light-mode .stTitle, 
+    body.light-mode .stHeader, 
+    body.light-mode .stSubheader {
+        color: #5d3d94;
+    }
+    body.light-mode .stMarkdown a {
+        color: #5d3d94;
+    }
+    body.light-mode .stTable {
+        background-color: #ffffff;
+        color: #2d2d2d;
+    }
+    body.light-mode .stTable th {
+        color: #5d3d94;
+    }
+    .stApp {
+    overflow: visible;
+}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Toggle Button
+if 'dark_mode' not in st.session_state:
+    st.session_state.dark_mode = True
+
+def toggle_theme():
+    st.session_state.dark_mode = not st.session_state.dark_mode
+
+col1, col2, col3 = st.columns([3,3,1])
+with col3:
+    st.button("🌓 Toggle Theme", on_click=toggle_theme)
+
+# JavaScript for theme switching
+st.markdown(
+    f"""
+    <script>
+    document.body.classList.toggle('light-mode', {str(st.session_state.dark_mode).lower()});
+    </script>
+    """,
+    unsafe_allow_html=True
+)
+
+
+
+
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap='small')
 
@@ -155,6 +214,45 @@ with col2:
         mime='application/octet-stream',
     )
 
+# Navigation Bar
+st.markdown(
+    """
+    <style>
+    .nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(93, 61, 148, 0.9);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    .nav-link {
+        color: white !important;
+        margin: 0 1rem;
+        text-decoration: none !important;
+    }
+    .nav-link:hover {
+        color: #ffd700 !important;
+    }
+    </style>
+
+    <div class="nav-bar">
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#experience">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#extracurricular">Extracurricular</a>
+        <a class="nav-link" href="#certifications">Certifications</a>
+    </div>
+    .stApp {
+    overflow: visible;
+}
+    """,
+    unsafe_allow_html=True
+)
+
+
 # --- SOCIAL LINKS ---
 st.write('#')
 cols = st.columns(len(SOCIAL_MEDIA))
@@ -163,7 +261,7 @@ for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
 
 # --- SKILLS ---
 st.write('#')
-st.subheader('Skills')
+st.subheader('Skills', anchor="skills")
 
 skills_data = [
     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
@@ -173,13 +271,13 @@ skills_data = [
     ('Areas of Interest', 'Natural Language Processing (NLP), LangChain,  LLMs,  Generative AI'),
     ('Soft Skills', 'Avid listener, Critical Thinking, Problem-Solving'),
 ]
-# index = ['A', 'B', 'C', 'D', 'E', 'F']
-skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'])
+index = ['A', 'B', 'C', 'D', 'E', 'F']
+skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'],index=index)
 st.table(skills_df)
 
 # --- EXPERIENCE ---
 st.write('#')
-st.subheader('**Experience**')
+st.subheader('**Experience**', anchor="experience")
 st.write(
     '''
 :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
@@ -214,7 +312,7 @@ st.write(
 
 # --- PROJECTS ---
 st.write('#')
-st.subheader('Projects')
+st.subheader('Projects', anchor="projects")
 st.write(
     '''
     :computer: [**Legal Clarity**](https://github.com/PATELOM925/Legal_Clarity) - Simplifying Legal Documents
@@ -250,7 +348,7 @@ st.write(
 
 # --- CO-CURRICULAR ACTIVITIES ---
 st.write('#')
-st.subheader('Extracurriculars')
+st.subheader('Extracurriculars', anchor="extracurricular")
 st.write(
     '''
 - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
@@ -263,7 +361,7 @@ st.write(
 
 # --- CERTIFICATIONS ---
 st.write('#')
-st.subheader('Certifications')
+st.subheader('Certifications', anchor="certifications")
 st.write(
     '''
 - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
@@ -284,7 +382,28 @@ st.subheader('Learnt From')
 for mentor, link in Learnt_From.items():
     st.write(f'[{mentor}]({link})')
 
+#new Edition
+# Contact Section
+st.write('#')
+st.subheader("Contact Me", anchor="contact")
 
+# Social Links (Repeated)
+cols = st.columns(len(SOCIAL_MEDIA))
+for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
+    cols[index].write(f'<a href="{link}"><img src="{platform}" alt="HTML tutorial" style="width:42px;height:42px;"></a>', 
+                     unsafe_allow_html=True)
+
+# Contact Form
+with st.form(key='contact_form'):
+    st.write("## Send me a message")
+    name = st.text_input("Name")
+    email = st.text_input("Email")
+    message = st.text_area("Message")
+    submit_button = st.form_submit_button(label='Send Message')
+    
+    if submit_button:
+        # Add your email sending logic here
+        st.success(f"Thank you {name}! Your message has been sent. I'll respond to you at {email} soon.")
 
 
 
