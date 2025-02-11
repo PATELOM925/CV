@@ -2,7 +2,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import requests  # Used in the contact form
+import requests  
 
 # ----------------------------
 # PAGE CONFIGURATION & PATHS
@@ -38,7 +38,7 @@ Learnt_From = {
 }
 
 # ----------------------------
-# CSS STYLING
+# CSS 
 # ----------------------------
 st.markdown(
     """
@@ -57,6 +57,14 @@ st.markdown(
       color: #e0e0e0;
       overflow: visible;
     }
+    /* Force profile pic to be a 250x250 square */
+    .stImage > img {
+      border-radius: 0 !important;
+      width: 250px !important;
+      height: 250px !important;
+      object-fit: cover;
+    }
+    /* Navigation Bar */
     .nav-container {
       background: rgba(93, 61, 148, 0.9);
       padding: 0.75rem;
@@ -66,10 +74,12 @@ st.markdown(
       z-index: 100;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
     }
     .nav-links {
       display: flex;
       gap: 1.5rem;
+      flex-wrap: wrap;
     }
     .nav-links a {
       color: white;
@@ -80,17 +90,32 @@ st.markdown(
     .nav-links a:hover {
       color: #ffd700;
     }
+    /* Responsive adjustments for the nav bar */
+    @media screen and (max-width: 768px) {
+      .nav-links a {
+         font-size: 14px;
+         margin: 5px;
+      }
+    }
     /* Hero Section */
-    .hero {
-        margin-top: 16px;
+    .hero-col2 {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px; /* same height as the profile pic */
+    }
+    .hero-col2 h1 {
+      margin-bottom: 20px;
+    }
+    .hero-col2 h5 {
+      margin-bottom: 20px;
     }
     .stDownloadButton {
-        justify-content: center;
-       margin-top: 48px;
-       margin-left: 20px;
-        }
+      margin-left: 20px;
+      margin-top: -43px;
+    }
     .stDownloadButton > button {
-        
       color: #222;
       background-color: #ffffff;
       border: none;
@@ -103,6 +128,7 @@ st.markdown(
       background-color: #222;
       color: #ffd700;
     }
+    /* Table Styling */
     .stTable {
       background-color: #030f4f;
       color: #e0e0e0;
@@ -121,7 +147,7 @@ st.markdown(
 )
 
 # ----------------------------
-# NAVIGATION BAR (Centered, Sticky at the Top)
+# NAVIGATION BAR 
 # ----------------------------
 st.markdown(
     """
@@ -140,22 +166,29 @@ st.markdown(
 )
 
 # ----------------------------
-# HERO SECTION: PROFILE PICTURE, NAME, DESCRIPTION & RESUME DOWNLOAD
+# HERO SECTION: PROFILE PICTURE, TITLE, DESCRIPTION & RESUME DOWNLOAD
 # ----------------------------
 col1, col2 = st.columns([1, 2])
 with col1:
     st.image(profile_pic, width=250)
 with col2:
-    st.markdown(f"<h1 style='margin-left:20px;'>{NAME}</h1>", unsafe_allow_html=True)
-    st.markdown(f"<h5 style='margin-left:22px;'>{DESCRIPTION}</h5>", unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="hero-col2">
+            <div>
+                <h1>{NAME}</h1>
+                <h5>{DESCRIPTION}</h5>
+            </div>
+        """,
+        unsafe_allow_html=True
+    )
     st.download_button(
         label="📄 Download My Resume",
         data=PDFbyte,
         file_name=resume_file.name,
         mime="application/octet-stream"
     )
-
+    st.markdown("</div>", unsafe_allow_html=True)
 
 # ----------------------------
 # SOCIAL LINKS SECTION
@@ -324,920 +357,13 @@ with st.form(key='contact_form'):
             form_data = {
                 "name": name_input,
                 "email": email_input,
-                "message": message_input
+                "message": message_input 
             }
             response = requests.post(
-                "https://formspree.io/f/xnnjbpve",  # Replace with your actual Formspree endpoint if needed
+                "https://formspree.io/f/xnnjbpve",  
                 data=form_data
             )
             if response.status_code == 200:
                 st.success(f"Thank you {name_input}! Your message has been sent. I'll respond to you at {email_input} soon.")
             else:
                 st.error("Failed to send the message. Please try again later.")
-
-
-
-
-
-
-# from pathlib import Path
-# import streamlit as st
-# from PIL import Image
-# import pandas as pd 
-
-# # --- PATH SETTINGS --- 
-# current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-# resume_file = current_directory / 'details' / 'Om_Resume.pdf'
-# profile_pic = current_directory / 'details' / 'Profile Photo - Om Patel.png'
-
-# # --- GENERAL SETTINGS ---
-# PAGE_TITLE = 'CV | OM M. PATEL'
-# PAGE_ICON = ':rocket:'
-# NAME = 'OMKUMAR MITESHBHAI PATEL'
-# DESCRIPTION = '''Diving Deep in Data'''
-# EMAIL = 'iampatelom@gmail.com'
-
-# SOCIAL_MEDIA = {
-#     'https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg': 'https://github.com/PATELOM925',
-#     'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://www.linkedin.com/in/om-m-patel/',
-#     'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg': 'mailto:iampatelom@gmail.com',
-#     'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
-#     'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
-# }
-
-# Learnt_From = {
-#     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
-#     'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
-#     'Towards Data Science': 'https://towardsdatascience.com/',
-#     'DeepLearning.AI': 'https://www.deeplearning.ai/',
-#     'iNeuron': 'https://ineuron.ai/'
-# }
-
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-
-# # --- LOAD PDF & PROFILE PIC ---
-# with open(resume_file, 'rb') as pdf_file:
-#     PDFbyte = pdf_file.read()
-# profile_pic = Image.open(profile_pic)
-
-# st.markdown(
-#     """
-#     <style>
-#     body {
-#     font-family: 'Arial', sans-serif;
-#     color: #e0e0e0; /* Light grey text for readability */
-#     background: linear-gradient(180deg, #030f4f, #5d3d94 100%);
-#     background-attachment: fixed; /* Ensures gradient effect moves with scrolling */
-#     transition: background 0.5s ease-in-out;
-# }
-
-# .scrolled {
-#     background: linear-gradient(180deg, #5d3d94, #030f4f 100%);
-# }
-# .stApp {
-#     background: transparent; /* Inherits body background */
-#     color: #e0e0e0;
-# }
-
-#     .stDownloadButton > button {
-#         color: #222; /* Darker font color for text */
-#         background-color: ##00044d; /* Dark grey background */
-#         border: none;
-#         border-radius: 8px;
-#         padding: 8px 16px;
-#         font-size: 16px;
-#         font-weight: bold;
-#     }
-#     .stDownloadButton > button:hover {
-#         background-color: #222; /* Even darker background on hover */
-#         color: #ffd700; /* Golden yellow for hover contrast */
-#     }
-
-
-#     .stButton > button {
-#         color: white;
-#         background-color: #444; /* Dark grey */
-#         border: none;
-#         border-radius: 8px;
-#         padding: 8px 16px;
-#         font-size: 16px;
-#         font-weight: bold;
-#     }
-#     .stButton > button:hover {
-#         background-color: #222; /* Even darker grey */
-#         color: #ffd700; /* Golden yellow for hover contrast */
-#     }
-#     .stTitle, .stHeader, .stSubheader {
-#         color: #ffd700; /* Golden yellow */
-#     }
-#     .stMarkdown a {
-#         color: #ffd700;
-#         text-decoration: none;
-#     }
-#     .stMarkdown a:hover {
-#         color: #ffc300;
-#         text-decoration: underline;
-#     }
-#     .stImage > img {
-#         border-radius: 50%;
-#         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9); /* Darker shadow */
-#     }
-#     .stTable {
-#         background-color: #030f4f; /* Match the darker theme */
-#         color: #e0e0e0;
-#         border-collapse: collapse;
-#     }
-#     .stTable th {
-#         color: #ffd700;
-#     }
-#     .stTable td {
-#         color: #e0e0e0;
-#         border-top: 1px solid #0b3d91;
-#     }
-#     .stApp {
-#     overflow: visible;
-# }
-#     </style>
-
-   
-#     """,
-#     unsafe_allow_html=True
-# )
-
-# st.markdown(
-#     """
-#     <style>
-#     body { background-color: #f8f9fa; }
-#     </style>
-#     <script>
-#     document.addEventListener('scroll', function () {
-#         const body = document.querySelector('body');
-#         if (window.scrollY > 10) {
-#             body.classList.add('scrolled');
-#         } else {
-#             body.classList.remove('scrolled');
-#         }
-#     });
-#     </script>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-
-# #new edition 
-# st.markdown(
-#     """
-#     <style>
-#     /* Light Mode Styles */
-#     body.light-mode {
-#         color: #2d2d2d;
-#         background: linear-gradient(180deg, #e6e1ff, #ffffff 100%);
-#     }
-#     body.light-mode .stTitle, 
-#     body.light-mode .stHeader, 
-#     body.light-mode .stSubheader {
-#         color: #5d3d94;
-#     }
-#     body.light-mode .stMarkdown a {
-#         color: #5d3d94;
-#     }
-#     body.light-mode .stTable {
-#         background-color: #ffffff;
-#         color: #2d2d2d;
-#     }
-#     body.light-mode .stTable th {
-#         color: #5d3d94;
-#     }
-#     .stApp {
-#     overflow: visible;
-# }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-# # Toggle Button
-# if 'dark_mode' not in st.session_state:
-#     st.session_state.dark_mode = True
-
-# def toggle_theme():
-#     st.session_state.dark_mode = not st.session_state.dark_mode
-
-# col1, col2, col3 = st.columns([3,3,1])
-# with col3:
-#     st.button("🌓 Toggle Theme", on_click=toggle_theme)
-
-# # JavaScript for theme switching
-# st.markdown(
-#     f"""
-#     <script>
-#     document.body.classList.toggle('light-mode', {str(st.session_state.dark_mode).lower()});
-#     </script>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-
-
-
-# # --- HERO SECTION ---
-# col1, col2 = st.columns(2, gap='small')
-
-# with col1:
-#     st.image(profile_pic, width=300, use_container_width=True)
-
-# with col2:
-#     st.title(NAME)
-#     st.write(DESCRIPTION)
-#     st.download_button(
-#         label='📄 Download My Resume',
-#         data=PDFbyte,
-#         file_name=resume_file.name,
-#         mime='application/octet-stream',
-#     )
-
-# # Navigation Bar
-# st.markdown(
-#     """
-#     <style>
-#     .nav-bar {
-#         position: sticky;
-#         top: 0;
-#         z-index: 100;
-#         background: rgba(93, 61, 148, 0.9);
-#         padding: 1rem;
-#         border-radius: 10px;
-#         margin-bottom: 2rem;
-#     }
-#     .nav-link {
-#         color: white !important;
-#         margin: 0 1rem;
-#         text-decoration: none !important;
-#     }
-#     .nav-link:hover {
-#         color: #ffd700 !important;
-#     }
-#     </style>
-
-#     <div class="nav-bar">
-#         <a class="nav-link" href="#contact">Contact</a>
-#         <a class="nav-link" href="#skills">Skills</a>
-#         <a class="nav-link" href="#experience">Experience</a>
-#         <a class="nav-link" href="#projects">Projects</a>
-#         <a class="nav-link" href="#extracurricular">Extracurricular</a>
-#         <a class="nav-link" href="#certifications">Certifications</a>
-#     </div>
-#     .stApp {
-#     overflow: visible;
-# }
-#     """,
-#     unsafe_allow_html=True
-# )
-
-
-# # --- SOCIAL LINKS ---
-# st.write('#')
-# cols = st.columns(len(SOCIAL_MEDIA))
-# for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-#     cols[index].write(f'<a href="{link}"><img src="{platform}" alt="HTML tutorial" style="width:42px;height:42px;"></a>', unsafe_allow_html=True)
-
-# # --- SKILLS ---
-# st.write('#')
-# st.subheader('Skills', anchor="skills")
-
-# skills_data = [
-#     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
-#     ('Databases', 'MySQL, MongoDB, PostgreSQL, Firebase'),
-#     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-#     ('Developer Tools', 'Git, Github, Docker, AWS, Microsoft Office, Asana, Confluence, JIRA, AI Tools, Compass, Workbench, Postman'),
-#     ('Areas of Interest', 'Natural Language Processing (NLP), LangChain,  LLMs,  Generative AI'),
-#     ('Soft Skills', 'Avid listener, Critical Thinking, Problem-Solving'),
-# ]
-# index = ['A', 'B', 'C', 'D', 'E', 'F']
-# skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'],index=index)
-# st.table(skills_df)
-
-# # --- EXPERIENCE ---
-# st.write('#')
-# st.subheader('**Experience**', anchor="experience")
-# st.write(
-#     '''
-# :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
-#  - Enhanced and managed scalable data pipelines for geospatial data processing, improving ETL processes for data flows increasing training efficiency by 36%
-#  - Containerized the application with Docker and deployed it on cloud platforms (Render/AWS), achieving consistent performance and scalability
-#  - Led integration efforts to support the platform’s credit management and routing workflows
-#  - Collaborated with cross-functional teams and stakeholders using GitHub, Jira, & Confluence to drive technical documentation and business needs
-
-# :pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
-#  - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs up to 55%.
-#  - Scraped and processed 10,000 plus address data using Overpass Turbo, Beautiful Soup, and Selenium.
-#  - Performed exploratory data analysis (EDA) on geospatial datasets, contributed to training machine learning models for geospatial analysis by leveraging KNN and other algorithms.
-#  - Optimized MongoDB databases to store data, and further contributed to authentication and credit management systems for APIs.
- 
-# :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
-#  - Assisted in UI improvements and API integration, leading to a 23% increase in user engagement.
-#  - Implemented web scraping using Python, Beautiful Soup, and Selenium, increasing data acquisition efficiency by 18%.
-#  - Created apps in Kotlin, integrated libraries like Glide, Retrofit and Firebase resulting in a 20% reduction of crash rates and improved asynchronous operations.
-#  - Major Skills Used: REST APIs, Firebase, Kotlin, Azure Blob, MySQL.
-
-# :pushpin: **Creator @ ASK OM PATEL (Nov 2021 -- July 2022)**
-#  - Spread financial and startup knowledge and gained more than 55,000 eyeballs on [Instagram](https://www.instagram.com/askompatel/).
-#  - Used [YouTube](https://www.youtube.com/@iampatelom) to spread startup knowledge in the native language (Gujarati).
-#  - Major Skills Used: Adobe Premiere Pro, Canva, Social Media Marketing.
-
-# :pushpin: **Graphic Designer @ Aasan Study (Mar 2020 -- Feb 2022)**
-#  - Created engaging educational content for the [website](https://aasanstudy.com/).
-#  - Designed graphics for educational posts for Instagram, YouTube, and website.
-#  - Major Skills Used: Adobe Photoshop, Adobe Illustrator, Web Content Writing.
-# '''
-# )
-
-# # --- PROJECTS ---
-# st.write('#')
-# st.subheader('Projects', anchor="projects")
-# st.write(
-#     '''
-#     :computer: [**Legal Clarity**](https://github.com/PATELOM925/Legal_Clarity) - Simplifying Legal Documents
-#     - Developed and deployed a containerized NLP Flask application for legal document processing.
-#     - Implemented advanced transformer-based models (Pegasus, T5, IndicBARTSS) using PyTorch and Hugging Face Transformers to enable multi-language legal text summarization and translation.
-#     - Optimized model inference and API performance by integrating tokenization with SentencePiece, efficient caching, and asynchronous Flask request handling.
-    
-#     :computer: [**Driver Pay Forecasting**](https://github.com/PATELOM925/Uber_NYC_Driver_Pay_Prediction) - Uber NYC Driver Pay Prediction
-#     - Implemented machine learning and deep learning models (ANN, Random Forest, LSTM, BiLSTM, LSTM+GRU) and performed comparative analysis for pay prediction.
-#     - Analyzed and visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using PowerBI.
-    
-#     :computer: [**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
-#     - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc.).
-#     - Performed EDA showcasing diverse graphs and model evaluation metrics.
-    
-#     :computer: [**SQL AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
-#     - Allows users to upload SQL databases and access them in natural language prompts.
-#     - Transforms input into precise SQL queries with an accuracy over 80%.
-
-#     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
-#     - Enhanced productivity and decision-making in document analysis with 77% accuracy using NLP, Streamlit, LangChain, PyPDF2, and FAISS for an efficient retrieval system.(RAG System).
-#     - Transformed document analysis with Google Generative AI, deploying the advanced system on Streamlit Cloud and enhancing the retrieval process.
-
-#     :computer: [**Autograder**](https://github.com/PATELOM925/AutoGrader) - Precision In Every Grade
-#     - Assisted a six-member team to develop an automated grading system, using React for the front end, Python with Flask for model integration, backend logic, and MongoDB for data storage.
-#     - Achieved over 63% accuracy in grading by analyzing NLP with BERT-Uncased and employing Spacy and PyTesseract for image processing
-
-#     :computer: [**Meme App**](https://github.com/PATELOM925/MemeApp) - Laughter Just A Click Away
-#     - Innovative and fun Android application developed using Kotlin and sourced from Reddit's API through Retrofit.
-#     - Utilizes Android development tools and Glide library to deliver a never-ending stream of hilarious memes. 
-#     '''
-# )
-
-# # --- CO-CURRICULAR ACTIVITIES ---
-# st.write('#')
-# st.subheader('Extracurriculars', anchor="extracurricular")
-# st.write(
-#     '''
-# - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
-# - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/) - The Sanskrit Club of PDEU* (May 2022 - May 2023)
-# - **Research Presenter** @ *ADCIS 2024, BITS Pilani* - Presented paper titled "Automated Sleep Stage Classification using Machine Intelligence Techniques" (September 2024, accepted/presented/under press in Springer Journal)
-# - **Top-5 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather (April 2024 - May 2024)
-# - **Volunteer** @ *Vardaan Foundation, Vadodara* - Civic and Social Internship: Taught digital literacy to underprivileged students (June 2022 - July 2022)
-#     '''
-# )
-
-# # --- CERTIFICATIONS ---
-# st.write('#')
-# st.subheader('Certifications', anchor="certifications")
-# st.write(
-#     '''
-# - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
-# - [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
-# - [LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)
-# - [Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)
-# - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
-# - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
-# - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
-# - [C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)
-
-# '''
-# )
-
-# # --- LEARNT FROM ---
-# st.write('#')
-# st.subheader('Learnt From')
-# for mentor, link in Learnt_From.items():
-#     st.write(f'[{mentor}]({link})')
-
-# #new Edition
-# # Contact Section
-# st.write('#')
-# st.subheader("Contact Me", anchor="contact")
-
-# # Contact Form
-# with st.form(key='contact_form'):
-#     st.write("## Send me a message")
-#     name = st.text_input("Name")
-#     email = st.text_input("Email")
-#     message = st.text_area("Message")
-#     submit_button = st.form_submit_button(label='Send Message')
-    
-#     if submit_button:
-#     if not name or not email or not message:
-#         st.error("Please fill out all fields.")
-#     else:
-#         # Send email logic here
-#         form_data = {
-#             "name": name,
-#             "email": email,
-#             "message": message
-#         }
-#         response = requests.post(
-#             "https://formspree.io/f/xnnjbpve",  # Replace with your Formspree endpoint
-#             data=form_data
-#         )
-#         if response.status_code == 200:
-#             st.success(f"Thank you {name}! Your message has been sent. I'll respond to you at {email} soon.")
-#         else:
-#             st.error("Failed to send the message. Please try again later.")
-
-
-#try 1
-
-# from pathlib import Path
-# import streamlit as st
-# from PIL import Image
-# import pandas as pd
-
-
-# # --- PATH SETTINGS --- 
-# current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-# # css_file = current_directory / 'styles' / 'main.css'
-# resume_file = current_directory / 'details' / 'Resume_CV_OM_M_Patel.pdf'
-# profile_pic = current_directory / 'details' / 'Profile Photo - Om Patel.png'
-
-# # --- GENERAL SETTINGS ---
-# PAGE_TITLE = 'CV | OM M PATEL'
-# PAGE_ICON = ':rocket:'
-# NAME = 'OM M PATEL'
-# DESCRIPTION = '''Diving Deep in Data'''
-# EMAIL = 'iampatelom@gmail.com'
-
-# SOCIAL_MEDIA = {
-#     'https://www.svgrepo.com/show/503359/github.svg': 'https://github.com/PATELOM925',
-#     'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://www.linkedin.com/in/om-m-patel-b539b8213/',
-#     'https://www.svgrepo.com/show/489456/email.svg': 'mailto:iampatelom@gmail.com',
-#     'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
-#     'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
-# }
-
-# # PROJECTS = {
-# #         'ChatPDF AI': {'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/', 'description': "ChatPDF AI leverages advanced NLP techniques and integration with Streamlit Cloud to streamline PDF analysis tasks, achieving an impressive 89% accuracy rate. With features like efficient document retrieval, it empowers users in making informed decisions faster."n " },
-# #         'SQl AI': {'url': 'https://github.com/PATELOM925/SQL-AI', 'description': " SQL databases can be uploaded by the user and We have Implemented advanced natural language prompts, transforming input into precise SQL queries " },
-# #         'Automated - Exam Paper Checker': {'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker', 'description': "An automated grading system that's making assessment a breeze for teachers and professors, Integrated BERT-Uncased for NLP-based grading, employed Spacy & PyTesseract for image processing ensuring accuracy in assessing diverse exam formats."},
-# #         'Meme App': {'url': 'https://github.com/PATELOM925/MemeApp', 'description': 'The "Meme App" is an innovative and fun Android application developed using Kotlin, Android development tools, and the powerful Glide library. This app is designed to bring a smile to your face by delivering a never-ending stream of hilarious and entertaining memes sourced from Reddits API through Retrofit.'},
-    
-
-# # }
-
-# #learnt from 
-# Learnt_From = {
-#     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
-#     'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
-#     'Towards Data Science' : 'https://towardsdatascience.com/',
-#     'DeepLearning,AI' : 'https://www.deeplearning.ai/',
-#     'iNeuron' : 'https://ineuron.ai/'
-#  }
-
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-
-# # --- LOAD PDF & PROFILE PIC ---
-# with open(resume_file, 'rb') as pdf_file:
-#     PDFbyte = pdf_file.read()
-# profile_pic = Image.open(profile_pic)
-# st.markdown(
-#     """
-#     <style>
-#     .stApp {
-#         background-color: #e3e5fa;
-#         padding: 2px;
-#     }
-#     body, h1, h2, h3, h4, h5, h6, p, div, span {
-#         color: black !important;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-# # --- HERO SECTION ---
-# col1, col2 = st.columns(2, gap='small')
-
-# with col1:
-#     st.image(profile_pic,width = 321,channels='RGB', use_column_width=True)
-
-# with col2:
-#     st.title(NAME)
-#     st.write(DESCRIPTION)
-#     st.download_button(
-#         label='📄 Download My Resume',
-#         data=PDFbyte,
-#         file_name=resume_file.name,
-#         mime='application/octet-stream',
-#     )
-
-
-# # --- SOCIAL LINKS ---
-# st.write('#')
-# cols = st.columns(len(SOCIAL_MEDIA))
-# for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-#     cols[index].write(f'<a href="{link}"><img src="{platform}" alt="HTML tutorial" style="width:42px;height:42px;"></a>', unsafe_allow_html=True)
-
-
-# st.write('#')
-# st.subheader('Skills')
-
-# # Data for the skills table
-# skills_data = [
-#     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
-#     ('Databases', 'MySQL, MongoDB, SQLite, Firebase'),
-#     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-#     ('Developer Tools', 'GIT, GITHUB, GOOGLE COLLAB, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH'),
-#     ('Areas of Interest', 'DATA SCIENCE, DATA ANALYST, ML-OPS, BIG DATA ANALYST, QUANTITATIVE ANALYST'),
-#     ('Soft Skills', 'AVID LISTENER, PROBLEM SOLVING, FAST-LEARNER, TEAM LEADERSHIP, ADAPTIVE'),
-#     ('Hands in Emerging Tech', 'LANGCHAIN, LLAMAINDEX, GENERATIVE AI, NLP'),
-# ]
-# index = ['A','B','C','D','E','F','G']
-# # Create a DataFrame without index and header
-# skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'],index=index)
-
-# # Display the table
-# st.table(skills_df)
-
-# # --- EXPERIENCE & QUALIFICATIONS ----
-# st.write('#')
-# st.subheader('Education')
-
-# cols = st.columns(4)
-# cols[0].write('🎓 **B.Tech in CSE**')
-# cols[1].write('*Pandit Deendayal Energy University(PDEU)*')
-# cols[2].write('2021--Present')
-# cols[3].write('CGPA: 8.69/10')
-
-# cols = st.columns(4)
-# cols[0].write('🎓 **Class XII**')
-# cols[1].write('*GEB, Vadodara*')
-# cols[2].write('2021')
-# cols[3].write('Percentage: 83%')
-
-# cols = st.columns(4)
-# cols[0].write('🎓 **JEE MAINS**')
-# cols[1].write('*NTA*')
-# cols[2].write('2021')
-# cols[3].write('Percentile: 96%')
-
-
-# # st.write('#')
-# # st.subheader('Experience')
-# # st.write(
-# #     '''
-# # - 📌 Android Developer (Intern) @ *Patchmax pvt ltd.* (May 2023 -- July 2023)
-# #     - Succesfully Learnt Android Development in Kotlin and Built Apps/features.
-# #     - Grateful to my team who taught me "Transforming Visions into Seamless Apps".
-# #     - Major Skills Used: REST APIs, Firebase, Kotlin, Azure Blob, MySQL.
-# # - 📌 Creator @ *ASK OM PATEL* (Nov 2021 -- July 2022)
-# #     - Spreaded Financial and Startup knowledge and gained more than 55,000 eyeballs on *[Instagram](https://www.instagram.com/askompatel/).*
-# #     - Used *[Youtube](https://www.youtube.com/@iampatelom)* to spread the startup knowledge in native language(Gujarati).
-# #     - Major Skills Used: Adobe Premiere Pro, Canva, Social Media Marketing
-# # - 📌 Graphic Designer  @ Aasan Study (Mar 2020 -- Feb 2022)
-# #     - Created engaging Educational Content for the website(https://aasanstudy.com/)
-# #     - Designed Graphics for educational posts for Instagram, YouTube and website.
-# #     - Major Skills USed: Adobe Photoshop, Adobe Illustrator, Web Content Writing'''
-# # )
-
-
-# # --- PROJECTS ---
-# st.write('#')
-# st.subheader('Projects')
-# st.write(
-#     '''
-#     :computer:[**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
-#     - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc)
-#     - Performed EDA showcasing diverse graphs and model evaluation metrics
-    
-#     :computer: [**SQl AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
-#     - Allows Users to upload SQL databases and Access them in Natural Language prompts.
-#     - Transforms input into precise SQL queries with  an accuracy over *90%*.
-
-#     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
-#     - let's user retrieve necessary information from PDF (Q/A chatbot).
-#     - Accuracy rate over 80% and Empowers them to make informed discussion.
-
-#     :computer: [**Autograder**](https://github.com/PATELOM925/AutoGrader) - Precision In Every Grade
-#     - Automated grading system for teachers and professors.
-#     - Integration of BERT-Uncased for NLP-based grading, along with Spacy & PyTessearch for Image processing.
-#     - Ensures accuracy in assessing diverse exam formats.
-
-#     :computer: [**Meme App**](https://github.com/PATELOM925/MemeApp) - Laughter Just A Click Away
-#     - Innovative and fun Android application developed using Kotlin and Sourced from Reddit's API through Retrofit.
-#     - Utilizes Android development tools and Glide library to Deliver a never-ending stream of hilarious memes. 
-#     '''
-# )
-
-# # PROJECTS = {
-# #      'ChatPDF AI - Talk With Your PDFs \n': {
-# #         'url': 'https://chatpdf-ai-om-m-patel.streamlit.app/',
-# #         'description': " - Leverages advanced NLP techniques \n"
-# #                        " - Integration with Streamlit Cloud for streamlined PDF analysis \n"
-# #                        " - Achieves an impressive 89% accuracy rate \n"
-# #                        " - Empowers users in making informed decisions faster"
-# #     },
-# #     'Autograder - Precision In Every Grade \n': {
-# #         'url': 'https://github.com/PATELOM925/Automatic-Paper-Checker',
-# #         'description': " - Automated grading system for teachers and professors \n"
-# #                        " - Integration of BERT-Uncased for NLP-based grading \n"
-# #                        " - Utilizes Spacy & PyTesseract for image processing \n"
-# #                        " - Ensures accuracy in assessing diverse exam formats"
-# #     },
-# #     'Meme App': {
-# #         'url': 'https://github.com/PATELOM925/MemeApp \n',
-# #         'description': " - Innovative and fun Android application developed using Kotlin \n"
-# #                        " - Utilizes Android development tools and Glide library \n"
-# #                        " - Delivers a never-ending stream of hilarious memes \n"
-# #                        " - Sourced from Reddit's API through Retrofit"
-# #     }
-# # }
-
-# st.write('#')
-# st.subheader('**Experience**')
-# st.write(
-#     '''
-
-# :pushpin: **Data Science Intern @ Sharperly (Feb 2024 -- July 2024)**
-#  - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs by 65%.
-#  - Created a MongoDB database to store geo-coordinates, reducing server load by 134%.
-#  - Enhanced location accuracy with a proximity search algorithm, ensuring recognition within a 10-meter range.
-#  - Conducted data scraping for addresses using OpenStreetMap and Overpass Turbo.
-#  - Managed code workflows with GitHub, and coordinated tasks and documentation using Jira and Confluence.
- 
-# :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
-#  - Successfully Learned Android Development in Kotlin and Built Apps/features.
-#  - Grateful to my team who taught me "Transforming Visions into Seamless Apps".
-#  - Major Skills Used: REST APIs, Firebase, Kotlin, Azure Blob, MySQL.
-
-# :pushpin: **Creator @ ASK OM PATEL (Nov 2021 -- July 2022)**
-#  - Spread Financial and Startup knowledge and gained more than 55,000 eyeballs on *[Instagram](https://www.instagram.com/askompatel/).*
-#  - Used *[Youtube](https://www.youtube.com/@iampatelom)* to spread the startup knowledge in native language (Gujarati).
-#  - Major Skills Used: Adobe Premiere Pro, Canva, Social Media Marketing
-
-# :pushpin: **Graphic Designer @ Aasan Study (Mar 2020 -- Feb 2022)**
-#  - Created engaging Educational Content for the *[website](https://aasanstudy.com/)*.
-#  - Designed Graphics for educational posts for Instagram, YouTube, and website.
-#  - Major Skills Used: Adobe Photoshop, Adobe Illustrator, Web Content Writing
-# '''
-# )
-
-
-
-# # ---ACHIEVEMENTS---
-# st.write('#')
-# st.subheader('Certifications')
-# st.write(
-# '''
-# - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
-# - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
-# - [Excel](https://olympus.mygreatlearning.com/courses/12583/certificate)
-# '''
-# )
- 
-# # Learnt From
-# st.write('#')
-# st.subheader('Learnt From')
-# for name, link in Learnt_From.items():
-#     st.markdown(f'<a href="{link}" style="line-height: 1.0;">{name}</a>', unsafe_allow_html=True)
-
-
-# # ---CO-CURRICULARS---
-# st.write('#')
-# st.subheader('Co-Curricular Activities')
-# st.write(
-#     '''
-# - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU*(May 2023 - Present)
-# - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/) - The Sanskrit Club of PDEU*(May 2022 - May 2023)
-
-# '''
-# )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# #NEW TRY 2
-
-# from pathlib import Path
-# import streamlit as st
-# from PIL import Image
-# import pandas as pd
-
-# # --- PATH SETTINGS --- 
-# current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-# resume_file = current_directory / 'details' / 'Om_M_Patel_Resume_July24.pdf'
-# profile_pic = current_directory / 'details' / 'Profile Photo - Om Patel.png'
-
-# # --- GENERAL SETTINGS ---
-# PAGE_TITLE = 'CV | OM M PATEL'
-# PAGE_ICON = ':rocket:'
-# NAME = 'OM M PATEL'
-# DESCRIPTION = '''Diving Deep in Data'''
-# EMAIL = 'iampatelom@gmail.com'
-
-# SOCIAL_MEDIA = {
-#     'https://www.svgrepo.com/show/503359/github.svg': 'https://github.com/PATELOM925',
-#     'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://www.linkedin.com/in/om-m-patel-b539b8213/',
-#     'https://www.svgrepo.com/show/489456/email.svg': 'mailto:iampatelom@gmail.com',
-#     'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
-#     'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
-# }
-
-# Learnt_From = {
-#     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
-#     'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
-#     'Towards Data Science': 'https://towardsdatascience.com/',
-#     'DeepLearning,AI': 'https://www.deeplearning.ai/',
-#     'iNeuron': 'https://ineuron.ai/'
-# }
-
-# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
-
-# # --- LOAD PDF & PROFILE PIC ---
-# with open(resume_file, 'rb') as pdf_file:
-#     PDFbyte = pdf_file.read()
-# profile_pic = Image.open(profile_pic)
-# st.markdown(
-#     """
-#     <style>
-#     body, h1, h2, h3, h4, h5, h6, p, div, span, table, .stMarkdown {
-#         color: black !important;
-#     }
-#     .stButton > button {
-#         color: white !important;
-#         background-color: white;
-#     }
-#     thead th, tbody th {
-#         color: black !important;
-#     }
-#     .stDataFrame thead tr, .stDataFrame tbody tr {
-#         color: black !important;
-#     }
-#     .stApp {
-#         background-color: #e3e5fa;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-
-# # --- HERO SECTION ---
-# col1, col2 = st.columns(2, gap='small')
-
-# with col1:
-#     st.image(profile_pic, width=321, channels='RGB', use_column_width=True)
-
-# with col2:
-#     st.title(NAME)
-#     st.write(DESCRIPTION)
-#     st.download_button(
-#         label='📄 Download My Resume',
-#         data=PDFbyte,
-#         file_name=resume_file.name,
-#         mime='application/octet-stream',
-#     )
-
-# # --- SOCIAL LINKS ---
-# st.write('#')
-# cols = st.columns(len(SOCIAL_MEDIA))
-# for index, (platform, link) in enumerate(SOCIAL_MEDIA.items()):
-#     cols[index].write(f'<a href="{link}"><img src="{platform}" alt="HTML tutorial" style="width:42px;height:42px;"></a>', unsafe_allow_html=True)
-
-# # --- SKILLS ---
-# st.write('#')
-# st.subheader('Skills')
-
-# # Data for the skills table
-# skills_data = [
-#     ('Programming Languages', 'Python, Java, C, HTML+CSS'),
-#     ('Databases', 'MySQL, MongoDB, SQLite, Firebase'),
-#     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
-#     ('Developer Tools', 'GIT, GITHUB, DOCKER, STREAMLIT CLOUD, AWS, MICROSOFT OFFICE, ASANA, CONFLUENCE, JIRA, AI TOOLS, COMPASS, WORKBENCH'),
-#     ('Areas of Interest', 'DATA SCIENCE, DATA ANALYST, ML-OPS, BIG DATA ANALYST, QUANTITATIVE ANALYST'),
-#     ('Soft Skills', 'AVID LISTENER, PROBLEM SOLVING, FAST-LEARNER, TEAM LEADERSHIP, ADAPTIVE'),
-#     ('Hands in Emerging Tech', 'LANGCHAIN, LLAMAINDEX, GENERATIVE AI, NLP'),
-# ]
-# index = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-# # Create a DataFrame without index and header
-# skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'], index=index)
-
-# # Display the table
-# st.table(skills_df)
-
-# # --- EXPERIENCE ---
-# st.write('#')
-# st.subheader('**Experience**')
-# st.write(
-#     '''
-# :pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
-#  - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs upto 55%.
-#  - Scraped and processed address data using Overpass Turbo, Beautiful Soup, and Selenium.
-#  - Performed exploratory data analysis (EDA) on geospatial datasets, Contributed to training machine learning models for geospatial analysis by leveraging KNN and other algorithms.
-#  - Optimized MongoDB databases to store data, and further contributed to authentication and credit management systems for APIs.
-#  - Collaborated code workflows with GitHub, coordinated tasks and documentation using Jira and Confluence
- 
-# :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
-#  - Successfully Learned Android Development in Kotlin and Built Apps/features.
-#  - Grateful to my team who taught me "Transforming Visions into Seamless Apps".
-#  - Major Skills Used: REST APIs, Firebase, Kotlin, Azure Blob, MySQL.
-
-# :pushpin: **Creator @ ASK OM PATEL (Nov 2021 -- July 2022)**
-#  - Spread Financial and Startup knowledge and gained more than 55,000 eyeballs on *[Instagram](https://www.instagram.com/askompatel/).*
-#  - Used *[Youtube](https://www.youtube.com/@iampatelom)* to spread the startup knowledge in native language (Gujarati).
-#  - Major Skills Used: Adobe Premiere Pro, Canva, Social Media Marketing
-
-# :pushpin: **Graphic Designer @ Aasan Study (Mar 2020 -- Feb 2022)**
-#  - Created engaging Educational Content for the *[website](https://aasanstudy.com/)*.
-#  - Designed Graphics for educational posts for Instagram, YouTube, and website.
-#  - Major Skills Used: Adobe Photoshop, Adobe Illustrator, Web Content Writing
-# '''
-# )
-
-# # --- PROJECTS ---
-# st.write('#')
-# st.subheader('Projects')
-# st.write(
-#     '''
-#     :computer:[**Driver Pay Forecasting**](https://github.com/PATELOM925/Uber_NYC_Driver_Pay_Prediction) - Uber NYC Driver Pay Prediction
-#     - Implemented machine learning and deep learning models (ANN, Random Forest, LSTM, BiLSTM,LSTM+GRU) and performed comparative analysis for pay prediction
-#     - Analyzed and Visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using PowerBI.
-    
-#     :computer:[**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
-#     - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc)
-#     - Performed EDA showcasing diverse graphs and model evaluation metrics
-    
-#     :computer: [**SQl AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
-#     - Allows Users to upload SQL databases and Access them in Natural Language prompts.
-#     - Transforms input into precise SQL queries with  an accuracy over *80%*.
-
-#     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
-#     - let's user retrieve necessary information from PDF (Q/A chatbot).
-#     - Accuracy rate over 80% and Empowers them to make informed discussion.
-
-#     :computer: [**Autograder**](https://github.com/PATELOM925/AutoGrader) - Precision In Every Grade
-#     - Automated grading system for teachers and professors.
-#     - Integration of BERT-Uncased for NLP-based grading, along with Spacy & PyTessearch for Image processing.
-#     - Ensures accuracy in assessing diverse exam formats.
-
-#     :computer: [**Meme App**](https://github.com/PATELOM925/MemeApp) - Laughter Just A Click Away
-#     - Innovative and fun Android application developed using Kotlin and Sourced from Reddit's API through Retrofit.
-#     - Utilizes Android development tools and Glide library to Deliver a never-ending stream of hilarious memes. 
-#     '''
-# )
-
-# # --- CO-CURRICULAR ACTIVITIES ---
-# st.write('#')
-# st.subheader('Co-Curricular Activities')
-# st.write(
-#     '''
-# - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU*(June 2023 - June 2024)
-# - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/) - The Sanskrit Club of PDEU*(May 2022 - May 2023)
-
-# '''
-# )
-
-# # --- CERTIFICATIONS ---
-# st.write('#')
-# st.subheader('Certifications')
-# st.write(
-#     '''
-# - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
-# - [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
-# - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
-# - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
-# - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
-
-# '''
-# )
-
-# # --- LEARNT FROM ---
-# st.write('#')
-# st.subheader('Learnt From')
-# for mentor, link in Learnt_From.items():
-#     st.write(f'[{mentor}]({link})')
-
-
-
-# # ---
-
