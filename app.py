@@ -323,7 +323,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
- ----------------------------
+ # ----------------------------
 # CERTIFICATIONS SECTION (with decreased line spacing)
 # ----------------------------
 st.write("")
