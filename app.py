@@ -146,11 +146,12 @@ st.markdown(
     }
     .less-space ul {
         margin-top: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 5px;
         padding-left: 20px;
     }
     .less-space li {
-        margin-bottom: 1px;
+        margin-top: 0.5px
+        margin-bottom: 0.5px;
     }
     </style>
     """,
