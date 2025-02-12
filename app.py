@@ -332,14 +332,14 @@ st.markdown(
     """
     <div class="less-space">
       <ul>
-         <li>[Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)</li>
-         <li>[NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)</li>
-         <li>[LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)</li>
-         <li>[Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)</li>
-         <li>[Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)</li>
-         <li>[Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)</li>
-         <li>[Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)</li>
-         <li>[C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)</li>
+        <li><a href="https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4" target="_blank">Generative AI Project</a></li>
+        <li><a href="https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf" target="_blank">NPTEL</a></li>
+        <li><a href="https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52" target="_blank">LLMs: RAG with LLamaIndex & AzureOpenA</a></li>
+        <li><a href="https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing" target="_blank">Applications of AI/ML in Biomedical Signal Processing & Computer Vision</a></li>
+        <li><a href="https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7" target="_blank">Generative AI with Large Language Models</a></li>
+        <li><a href="https://coursera.org/share/4b21792f6551d0c5096f1d761417278f" target="_blank">Langchain Chat With Your Data</a></li>
+        <li><a href="https://www.sololearn.com/certificates/CT-S9OKVGDH" target="_blank">Excel</a></li>
+        <li><a href="https://www.mygreatlearning.com/certificate/PWEPYSNT" target="_blank">C Language</a></li>
       </ul>
     </div>
     """,
@@ -355,13 +355,13 @@ st.markdown(
     """
     <div class="less-space">
       <ul>
-         <li>[Krish Naik](https://www.youtube.com/@krishnaik06)</li>
-         <li>[Santiago](https://x.com/svpino)</li>
-         <li>[Andrej Karpathy](https://x.com/karpathy)</li>
-         <li>[StatQuest with Josh Starmer](https://www.youtube.com/@statquest)</li>
-         <li>[Towards Data Science](https://towardsdatascience.com/)</li>
-         <li>[DeepLearning.AI](https://www.deeplearning.ai/)</li>
-         <li>[iNeuron](https://ineuron.ai/)</li>
+            <li><a href="https://www.youtube.com/@krishnaik06" target="_blank">Krish Naik</a></li>
+            <li><a href="https://x.com/svpino" target="_blank">Santiago</a></li>
+            <li><a href="https://x.com/karpathy" target="_blank">Andrej Karpathy</a></li>
+            <li><a href="https://www.youtube.com/@statquest" target="_blank">StatQuest with Josh Starmer</a></li>
+            <li><a href="https://towardsdatascience.com/" target="_blank">Towards Data Science</a></li>
+            <li><a href="https://www.deeplearning.ai/" target="_blank">DeepLearning.AI</a></li>
+            <li><a href="https://ineuron.ai/" target="_blank">iNeuron</a></li>
       </ul>
     </div>
     """,
