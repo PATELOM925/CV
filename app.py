@@ -29,13 +29,15 @@ SOCIAL_MEDIA = {
     'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
 }
 
-Learnt_From = {
-    'Krish Naik': 'https://www.youtube.com/@krishnaik06',
-    'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
-    'Towards Data Science': 'https://towardsdatascience.com/',
-    'DeepLearning.AI': 'https://www.deeplearning.ai/',
-    'iNeuron': 'https://ineuron.ai/'
-}
+# Learnt_From = {
+#     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
+#     'Santiago': 'https://x.com/svpino',
+#     'Andrej Karpathy' : 'https://x.com/karpathy',
+#     'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
+#     'Towards Data Science': 'https://towardsdatascience.com/',
+#     'DeepLearning.AI': 'https://www.deeplearning.ai/',
+#     'iNeuron': 'https://ineuron.ai/',
+# }
 
 # ----------------------------
 # CSS STYLING
@@ -141,6 +143,14 @@ st.markdown(
     .stTable td {
       color: #e0e0e0;
       border-top: 1px solid #0b3d91;
+    }
+    .less-space ul {
+        margin-top: 0.5;
+        margin-bottom: 0.5;
+        padding-left: 20px;
+    }
+    .less-space li {
+        margin-bottom: 3px;
     }
     </style>
     """,
@@ -307,38 +317,83 @@ st.markdown(
     - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
     - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (May 2022 - May 2023)
     - **Research Presenter** @ *ADCIS 2024, BITS Pilani* - Presented paper titled "Automated Sleep Stage Classification using Machine Intelligence Techniques" (September 2024, accepted/presented/under press in Springer Journal)
-    - **Top-5 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather (April 2024 - May 2024)
+    - **Top-10 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather (April 2024 - May 2024)
     - **Volunteer** @ *Vardaan Foundation, Vadodara* - Civic and Social Internship: Taught digital literacy to underprivileged students (June 2022 - July 2022)
     """,
     unsafe_allow_html=True
 )
 
-# ----------------------------
-# CERTIFICATIONS SECTION
+ ----------------------------
+# CERTIFICATIONS SECTION (with decreased line spacing)
 # ----------------------------
 st.write("")
 st.subheader("Certifications", anchor="certifications")
 st.markdown(
     """
-    - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
-    - [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
-    - [LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)
-    - [Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)
-    - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
-    - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
-    - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
-    - [C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)
+    <div class="less-space">
+      <ul>
+         <li>[Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)</li>
+         <li>[NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)</li>
+         <li>[LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)</li>
+         <li>[Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)</li>
+         <li>[Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)</li>
+         <li>[Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)</li>
+         <li>[Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)</li>
+         <li>[C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)</li>
+      </ul>
+    </div>
     """,
     unsafe_allow_html=True
 )
 
 # ----------------------------
-# LEARNT FROM SECTION
+# LEARNT FROM :
 # ----------------------------
 st.write("")
 st.subheader("Learnt From")
-for mentor, link in Learnt_From.items():
-    st.markdown(f"[{mentor}]({link})", unsafe_allow_html=True)
+st.markdown(
+    """
+    <div class="less-space">
+      <ul>
+         <li>[Krish Naik](https://www.youtube.com/@krishnaik06)</li>
+         <li>[Santiago](https://x.com/svpino)</li>
+         <li>[Andrej Karpathy](https://x.com/karpathy)</li>
+         <li>[StatQuest with Josh Starmer](https://www.youtube.com/@statquest)</li>
+         <li>[Towards Data Science](https://towardsdatascience.com/)</li>
+         <li>[DeepLearning.AI](https://www.deeplearning.ai/)</li>
+         <li>[iNeuron](https://ineuron.ai/)</li>
+      </ul>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# # ----------------------------
+# # CERTIFICATIONS SECTION
+# # ----------------------------
+# st.write("")
+# st.subheader("Certifications", anchor="certifications")
+# st.markdown(
+#     """
+#     - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
+#     - [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
+#     - [LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)
+#     - [Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)
+#     - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
+#     - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
+#     - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
+#     - [C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)
+#     """,
+#     unsafe_allow_html=True
+# )
+
+# # ----------------------------
+# # LEARNT FROM SECTION
+# # ----------------------------
+# st.write("")
+# st.subheader("Learnt From")
+# for mentor, link in Learnt_From.items():
+#     st.markdown(f"[{mentor}]({link})", unsafe_allow_html=True)
 
 # ----------------------------
 # CONTACT SECTION
