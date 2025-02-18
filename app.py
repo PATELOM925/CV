@@ -5,7 +5,7 @@ import pandas as pd
 import requests 
 
 # ----------------------------
-# PAGE CONFIGURATION & PATHS
+# PAGE CONFIGURATION & PATHS 
 # ----------------------------
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
 
@@ -45,7 +45,6 @@ SOCIAL_MEDIA = {
 st.markdown(
     """
     <style>
-    /* Global Dark Theme Styles */
     body {
       font-family: 'Arial', sans-serif;
       color: #e0e0e0;
@@ -59,14 +58,12 @@ st.markdown(
       color: #e0e0e0;
       overflow: visible;
     }
-    /* Force profile pic to be a 250x250 square */
     .stImage > img {
       border-radius: 0 !important;
       width: 250px !important;
       height: 250px !important;
       object-fit: cover;
     }
-    /* Navigation Bar */
     .nav-container {
       background: rgba(93, 61, 148, 0.9);
       padding: 0.75rem;
@@ -92,14 +89,12 @@ st.markdown(
     .nav-links a:hover {
       color: #ffd700;
     }
-    /* Responsive adjustments for the nav bar */
     @media screen and (max-width: 768px) {
       .nav-links a {
          font-size: 14px;
          margin: 5px;
       }
     }
-    /* Hero Section */
     .hero-col2 {
       margin-left: 20px;
       display: flex;
@@ -113,7 +108,6 @@ st.markdown(
     .hero-col2 h5 {
       margin-bottom: 20px;
     }
-    /* Download Button adjustments */
     .stDownloadButton {
       margin-left: 20px;
       margin-top: -57px;
@@ -131,7 +125,6 @@ st.markdown(
       background-color: #222;
       color: #ffd700;
     }
-    /* Table Styling */
     .stTable {
       background-color: #030f4f;
       color: #e0e0e0;
@@ -159,7 +152,7 @@ st.markdown(
 )
 
 # ----------------------------
-# NAVIGATION BAR 
+# NAV BAR 
 # ----------------------------
 st.markdown(
     """
@@ -178,7 +171,7 @@ st.markdown(
 )
 
 # ----------------------------
-# HERO SECTION: PROFILE PICTURE, TITLE, DESCRIPTION & RESUME DOWNLOAD
+# HERO SECTION: PROFILE PIC, TITLE, DESCRIPTION & CV DOWNLOAD
 # ----------------------------
 col1, col2 = st.columns([1, 2])
 with col1:
@@ -204,7 +197,7 @@ with col2:
     
 
 # ----------------------------
-# SOCIAL LINKS SECTION
+# SOCIAL LINKS 
 # ----------------------------
 st.write("")
 cols = st.columns(len(SOCIAL_MEDIA))
@@ -215,7 +208,7 @@ for index, (icon_url, link_url) in enumerate(SOCIAL_MEDIA.items()):
     )
 
 # ----------------------------
-# SKILLS SECTION
+# SKILLS 
 # ----------------------------
 st.write("")
 st.subheader("Skills", anchor="skills")
@@ -232,7 +225,7 @@ skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'], index=inde
 st.table(skills_df)
 
 # ----------------------------
-# EXPERIENCE SECTION
+# EXP 
 # ----------------------------
 st.write("")
 st.subheader("Experience", anchor="experience")
@@ -270,7 +263,7 @@ st.markdown(
 )
 
 # ----------------------------
-# PROJECTS SECTION
+# PROJECTS 
 # ----------------------------
 st.write("")
 st.subheader("Projects", anchor="projects")
@@ -309,7 +302,7 @@ st.markdown(
 )
 
 # ----------------------------
-# EXTRACURRICULARS SECTION
+# EXTRACURRICULARS 
 # ----------------------------
 st.write("")
 st.subheader("Extracurriculars", anchor="extracurricular")
@@ -324,8 +317,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
- # ----------------------------
-# CERTIFICATIONS SECTION (with decreased line spacing)
+# ----------------------------
+# CERTIFICATIONS 
 # ----------------------------
 st.write("")
 st.subheader("Certifications", anchor="certifications")
@@ -368,36 +361,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# # ----------------------------
-# # CERTIFICATIONS SECTION
-# # ----------------------------
-# st.write("")
-# st.subheader("Certifications", anchor="certifications")
-# st.markdown(
-#     """
-#     - [Generative AI Project](https://learn.ineuron.ai/certificate/fa40c5f4-fe71-42a6-8557-9a8a1abdb7d4)
-#     - [NPTEL](https://internalapp.nptel.ac.in/NOC/NOC24/SEM1/Ecertificates/107/noc24-de06/Course/NPTEL24DE06S55570004730616807.pdf)
-#     - [LLMs: RAG with LLamaIndex & AzureOpenA](https://credsverse.com/credentials/477d05ad-f429-46d3-94b7-2c7dc8695a52)
-#     - [Applications of AI/ML in Biomedical Signal Processing & Computer Vision](https://drive.google.com/file/d/18Sz-wRGKDv-6jrAU1IxtofAjchoHLu14/view?usp=sharing)
-#     - [Generative AI with Large Language Models](https://www.coursera.org/account/accomplishments/certificate/XGBDJAYXTEF7)
-#     - [Langchain Chat With Your Data](https://coursera.org/share/4b21792f6551d0c5096f1d761417278f)
-#     - [Excel](https://www.sololearn.com/certificates/CT-S9OKVGDH)
-#     - [C Language](https://www.mygreatlearning.com/certificate/PWEPYSNT)
-#     """,
-#     unsafe_allow_html=True
-# )
-
-# # ----------------------------
-# # LEARNT FROM SECTION
-# # ----------------------------
-# st.write("")
-# st.subheader("Learnt From")
-# for mentor, link in Learnt_From.items():
-#     st.markdown(f"[{mentor}]({link})", unsafe_allow_html=True)
-
 # ----------------------------
-# CONTACT SECTION
+# CONTACT 
 # ----------------------------
 st.write("")
 st.subheader("Contact Me", anchor="contact")
