@@ -29,16 +29,6 @@ SOCIAL_MEDIA = {
     'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
 }
 
-# Learnt_From = {
-#     'Krish Naik': 'https://www.youtube.com/@krishnaik06',
-#     'Santiago': 'https://x.com/svpino',
-#     'Andrej Karpathy' : 'https://x.com/karpathy',
-#     'StatQuest with Josh Starmer': 'https://www.youtube.com/@statquest',
-#     'Towards Data Science': 'https://towardsdatascience.com/',
-#     'DeepLearning.AI': 'https://www.deeplearning.ai/',
-#     'iNeuron': 'https://ineuron.ai/',
-# }
-
 # ----------------------------
 # CSS STYLING
 # ----------------------------
