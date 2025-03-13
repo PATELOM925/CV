@@ -273,7 +273,7 @@ st.markdown(
     - Performed EDA showcasing diverse graphs and model evaluation metrics.
     
     :computer: [**SQL AI**](https://github.com/PATELOM925/SQL-AI) - Access Database In Your Language
-    - Allows users to upload SQL databases and access them in natural language prompts.
+    - Allows users to upload SQL databases and access them in natural language prompts. 
     - Transforms input into precise SQL queries with an accuracy over 80%.
 
     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
