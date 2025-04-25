@@ -20,7 +20,7 @@ profile_pic = Image.open(profile_pic_path)
 NAME = "OM M. PATEL"
 DESCRIPTION = "Diving Deep in Data"
 EMAIL = "iampatelom@gmail.com"
-
+ 
 SOCIAL_MEDIA = {
     'https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg': 'https://github.com/PATELOM925',
     'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://www.linkedin.com/in/om-m-patel/',
