@@ -222,7 +222,7 @@ st.subheader("Experience", anchor="experience")
 st.markdown(
     """
     :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
-     - Enhanced and managed scalable data pipelines for geospatial data processing, improving ETL processes for data flows increasing training efficiency by 36%
+     - Enhanced data pipelines for geospatial data processing using Airflow, improved ETL efficiency by 36%.
      - Containerized the application with Docker and deployed it on cloud platforms (Render/AWS), achieving consistent performance and scalability
      - Led integration efforts to support the platform’s credit management and routing workflows
      - Collaborated with cross-functional teams and stakeholders using GitHub, Jira, & Confluence to drive technical documentation and business needs
