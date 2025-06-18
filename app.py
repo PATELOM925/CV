@@ -223,14 +223,15 @@ st.markdown(
     """
     :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
      - Enhanced data pipelines for geospatial data processing using Airflow, improved ETL efficiency by 36%.
+     - Worked with messy real-world data, developing robust pipelines using ETL/ELT stack.
      - Leveraged CI/CD pipelines with GitHub Actions to streamline deployment of containerized services on AWS, Render, and Cloudinary, for scale and consistent high performance.
-     - Led integration efforts to support the platform’s routing workflows, credit and payment management. 
+     - Led integration efforts to support the platform’s routing workflows and payment management. 
      - Collaborated with teams and stakeholders, used GitHub, Jira, & Confluence to drive technical documentation.
 
     :pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
-     - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs up to 55%.
-     - Scraped and processed 10,000 plus address data using Overpass Turbo, Beautiful Soup, and Selenium.
-     - Performed exploratory data analysis (EDA) on geospatial datasets, contributed to training machine learning models for geospatial analysis by leveraging KNN and other algorithms.
+     - Developed geocoding APIs based on Flask and Geopandas to reduce dependency on GMaps API and cut costs up to 45% (approx 350 USD) monthly.
+     - Scraped and processed 20,000 plus address data using Overpass Turbo, Beautiful Soup, and Selenium.
+     - Performed exploratory data analysis (EDA) on geospatial datasets, contributed to training of models for Africa-specific geospatial analysis by leveraging clustering algorithms.
      - Optimized MongoDB databases to store data, and further contributed to authentication and credit management systems for APIs.
      
     :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
