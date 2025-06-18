@@ -223,9 +223,9 @@ st.markdown(
     """
     :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
      - Enhanced data pipelines for geospatial data processing using Airflow, improved ETL efficiency by 36%.
-     - Containerized the application with Docker and deployed it on cloud platforms (Render/AWS), achieving consistent performance and scalability
-     - Led integration efforts to support the platform’s credit management and routing workflows
-     - Collaborated with cross-functional teams and stakeholders using GitHub, Jira, & Confluence to drive technical documentation and business needs
+     - Leveraged CI/CD pipelines with GitHub Actions to streamline deployment of containerized services on AWS, Render, and Cloudinary, for scale and consistent high performance.
+     - Led integration efforts to support the platform’s routing workflows, credit and payment management. 
+     - Collaborated with teams and stakeholders, used GitHub, Jira, & Confluence to drive technical documentation.
 
     :pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
      - Developed a geocoding solution using Python (Flask, Geopandas, etc.), reducing dependency on Google Cloud API and cutting costs up to 55%.
