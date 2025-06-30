@@ -8,7 +8,7 @@ import requests
 # PAGE CONFIGURATION & PATHS 
 # ----------------------------
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
-
+ 
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
 resume_file = current_directory / 'details' / 'Om_Resume.pdf'
 profile_pic_path = current_directory / 'details' / 'Profile Photo - Om Patel.png'
@@ -221,7 +221,7 @@ st.write("")
 st.subheader("Experience", anchor="experience")
 st.markdown(
     """
-    :pushpin: **Data Engineer @ Sharperly (August 2024 -- Present)**
+    :pushpin: **Data Engineer @ Sharperly(Zaza Tech Ltd.) (August 2024 -- Present)**
      - Enhanced data pipelines for geospatial data processing using Airflow, improved ETL efficiency by 36%.
      - Worked with messy real-world data, developing robust pipelines using ETL/ELT stack.
      - Leveraged CI/CD pipelines with GitHub Actions to streamline deployment of containerized services on AWS, Render, and Cloudinary, for scale and consistent high performance.
