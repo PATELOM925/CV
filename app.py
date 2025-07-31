@@ -301,7 +301,7 @@ st.markdown(
     """
     - **President** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
     - **Graphic Head** @ *[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (May 2022 - May 2023)
-    - **Research Presenter** @ *ADCIS 2024, BITS Pilani* - Presented paper titled "Automated Sleep Stage Classification Using Machine Intelligence Techniques" (September 2024, accepted/presented/under press in Springer Journal)
+    - **Research Presenter** @ *ADCIS 2024, BITS Pilani* - Presented paper titled "Automated Sleep Stage Classification Using Machine Intelligence Techniques" (September 2024, Published in Springer Journal)
     - **Top-10 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather (April 2024 - May 2024)
     - **Volunteer** @ *Vardaan Foundation, Vadodara* - Civic and Social Internship: Taught digital literacy to underprivileged students (June 2022 - July 2022)
     """,
