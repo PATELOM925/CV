@@ -6,7 +6,7 @@ import requests
 
 # ----------------------------
 # PAGE CONFIGURATION & PATHS 
-# ----------------------------
+# ---------------------------- 
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
  
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
