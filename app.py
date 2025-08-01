@@ -2,7 +2,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 import pandas as pd
-import requests 
+import requests  
  
 # ----------------------------
 # PAGE CONFIGURATION & PATHS 
