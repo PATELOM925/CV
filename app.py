@@ -5,7 +5,7 @@ import pandas as pd
 import requests  
  
 # ----------------------------
-# PAGE CONFIGURATION & PATHS 
+# PAGE CONFIGURATION & PATHS  
 # ---------------------------- 
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
  
