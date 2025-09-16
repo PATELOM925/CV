@@ -221,7 +221,7 @@ st.write("")
 st.subheader("Experience", anchor="experience")
 st.markdown(
     """
-    :pushpin: **Data Engineer @ Sharperly(Zaza Tech Ltd.) (Dec 2024 -- Aug 2025)**
+    :pushpin: **Backend & Data Engineer Intern @ Sharperly(Zaza Tech Ltd.) (Dec 2024 -- Aug 2025)**
      - Designed Airflow-powered ETL pipelines for geospatial datasets (Geopandas, Python), increasing throughput around 25%.
      - Worked with messy real-world data, developing robust pipelines using ETL/ELT stack.
      - Containerized services on AWS and Render via CI/CD pipelines and GitHub Actions, ensuring scalability and consistent performance.
