@@ -300,9 +300,9 @@ st.write("")
 st.subheader("Extracurriculars", anchor="extracurricular")
 st.markdown(
     """
-    - **Vector AI 2025-2026 Scholarship Recipient**, York University (May 2025)
-    - **Published Research Paper** @*ADCIS 2024, BITS Pilani*- "[Automated Sleep Stage Classification Using Machine Intelligence Techniques](https://link.springer.com/chapter/10.1007/978-981-96-3652-5_14)" (September 2024)
-    - **Top-10 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather (April 2024 - May 2024)
+    - **Vector AI 2025-2026 Scholarship Recipient**, York University 
+    - **Published Research Paper** @*ADCIS 2024, BITS Pilani*- "[Automated Sleep Stage Classification Using Machine Intelligence Techniques](https://link.springer.com/chapter/10.1007/978-981-96-3652-5_14)" 
+    - **Top-10 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather 
     - **AI/ML Mentor** Guided 10+ students on projects including Autograder and Legal Clarity
     - **President** @*[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
     - **Graphic Head** @*[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (May 2022 - May 2023)
