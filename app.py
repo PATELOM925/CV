@@ -10,7 +10,7 @@ import requests
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
  
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-resume_file = current_directory / 'details' / 'Om_Resume.pdf'
+resume_file = current_directory / 'details' / 'Om_Resume_Canada.pdf'
 profile_pic_path = current_directory / 'details' / 'Profile Photo - Om Patel.png'
 
 with open(resume_file, 'rb') as pdf_file:
@@ -25,7 +25,7 @@ SOCIAL_MEDIA = {
     'https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg': 'https://github.com/PATELOM925',
     'https://www.svgrepo.com/show/110195/linkedin.svg': 'https://www.linkedin.com/in/om-m-patel/',
     'https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg': 'mailto:iampatelom@gmail.com',
-    'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
+    # 'https://www.svgrepo.com/show/303115/twitter-3-logo.svg': 'https://twitter.com/om_m_patel',
     'https://www.svgrepo.com/show/349422/kaggle.svg': 'https://www.kaggle.com/iamommpatel',
 }
 
@@ -203,12 +203,12 @@ for index, (icon_url, link_url) in enumerate(SOCIAL_MEDIA.items()):
 st.write("")
 st.subheader("Skills", anchor="skills")
 skills_data = [
-    ('Programming Languages', 'Python, Java, C, HTML+CSS'),
+    ('Programming Languages', 'Python, JavaScript, SQL, HTML+CSS'),
     ('Databases', 'MySQL, MongoDB, PostgreSQL, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
     ('Developer Tools', 'Git, Github, Docker, AWS, Microsoft Office, Asana, Confluence, JIRA, AI Tools, Compass, Workbench, Postman'),
-    ('Areas of Interest', 'Natural Language Processing (NLP), LangChain,  LLMs,  Generative AI'),
-    ('Soft Skills', 'Avid listener, Critical Thinking, Problem-Solving'),
+    ('Areas of Interest', 'AI Democratization', 'NLP', 'LLMs', 'Deep Generative Models', 'Prompt engineering'),
+    ('Soft Skills', 'Avid listener, Critical Thinker, Problem-Solver'),
 ]
 index_labels = ['A', 'B', 'C', 'D', 'E', 'F']
 skills_df = pd.DataFrame(skills_data, columns=['Category', 'Skills'], index=index_labels)
@@ -221,18 +221,18 @@ st.write("")
 st.subheader("Experience", anchor="experience")
 st.markdown(
     """
-    :pushpin: **Data Engineer @ Sharperly(Zaza Tech Ltd.) (August 2024 -- Present)**
-     - Enhanced data pipelines for geospatial data processing using Airflow, improved ETL efficiency by 36%.
+    :pushpin: **Data Engineer @ Sharperly(Zaza Tech Ltd.) (Dec 2024 -- Aug 2025)**
+     - Designed Airflow-powered ETL pipelines for geospatial datasets (Geopandas, Python), increasing throughput around 25%.
      - Worked with messy real-world data, developing robust pipelines using ETL/ELT stack.
-     - Leveraged CI/CD pipelines with GitHub Actions to streamline deployment of containerized services on AWS, Render, and Cloudinary, for scale and consistent high performance.
-     - Led integration efforts to support the platform’s routing workflows and payment management. 
+     - Containerized services on AWS and Render via CI/CD pipelines and GitHub Actions, ensuring scalability and consistent performance.
+     - Optimized MongoDB schemas and indexing for real-time lookups used by downstream ML components.
      - Collaborated with teams and stakeholders, used GitHub, Jira, & Confluence to drive technical documentation.
 
     :pushpin: **Data Science Intern @ Sharperly (March 2024 -- July 2024)**
-     - Developed geocoding APIs based on Flask and Geopandas to reduce dependency on GMaps API and cut costs up to 45% (approx 350 USD) monthly.
-     - Scraped and processed 20,000 plus address data using Overpass Turbo, Beautiful Soup, and Selenium.
-     - Performed exploratory data analysis (EDA) on geospatial datasets, contributed to training of models for Africa-specific geospatial analysis by leveraging clustering algorithms.
-     - Optimized MongoDB databases to store data, and further contributed to authentication and credit management systems for APIs.
+     - Developed geocoding APIs with Python (Flask, Geopandas) to reduce dependency on GMaps API and cutting costs upto 45% (approx 350 USD) monthly.
+     - Scraped and pre-processed 20k+ addresses to create robust training datasets, producing versioned datasets for ML training
+     - Performed exploratory data analysis (EDA) on geospatial datasets.
+     - Trained and evaluated models (RNNs, K-Means, GNNs, Autoencoders) to predict user behaviour, optimize routes and detect anomalies.
      
     :pushpin: **Android Developer (Intern) @ Patchmax pvt ltd. (May 2023 -- July 2023)**
      - Assisted in UI improvements and API integration, leading to a 23% increase in user engagement.
@@ -267,7 +267,8 @@ st.markdown(
     
     :computer: [**Driver Pay Forecasting**](https://github.com/PATELOM925/Uber_NYC_Driver_Pay_Prediction) - Uber NYC Driver Pay Prediction
     - Implemented machine learning and deep learning models (ANN, Random Forest, LSTM, BiLSTM, LSTM+GRU) and performed comparative analysis for pay prediction.
-    - Analyzed and visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using PowerBI.
+    - Analyzed architecture and hyperparameters searches, achieving almost 12% lower RMSE vs. baseline.
+    - Visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using Tableau.
     
     :computer: [**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
     - Achieved high accuracy (R²: 0.9844) by comparing & selecting the best regression model (XGBoost, Gradient Boosting, Linear Regression, Decision Tree, etc.).
@@ -278,12 +279,12 @@ st.markdown(
     - Transforms input into precise SQL queries with an accuracy over 80%.
 
     :computer: [**ChatPDF AI**](https://chatpdf-ai-om-m-patel.streamlit.app/) - Talk With Your PDFs
-    - Enhanced productivity and decision-making in document analysis with 77% accuracy using NLP, Streamlit, LangChain, PyPDF2, and FAISS for an efficient retrieval system (RAG System).
-    - Transformed document analysis with Google Generative AI, deploying the advanced system on Streamlit Cloud and enhancing the retrieval process.
+    - Built a Proof Of Concept for Conversational AI using RAG architecture with 80% accuracy using Sentence Transformers, LangChain, PyPDF2 and FAISS by optimizing search and analysis
+    - Deployed the advanced system on Streamlit Cloud and enhancing the retrieval process.
 
     :computer: [**Autograder**](https://github.com/PATELOM925/AutoGrader) - Precision In Every Grade
-    - Assisted a six-member team to develop an automated grading system, using React for the front end, Python with Flask for model integration, backend logic, and MongoDB for data storage.
-    - Achieved over 63% accuracy in grading by analyzing NLP with BERT-Uncased and employing Spacy and PyTesseract for image processing
+    - Led a six-member team to develop an automated grading system, using React for the front-end, Python with Flask for model integration, backend logic, and MongoDB for data storage.
+    - Achieved over 63% grading accuracy by developing a custom pipeline combining BERT-Uncased with NLP; leveraged SpaCy and PyTesseract for image-based answer sheet processing.
 
     :computer: [**Meme App**](https://github.com/PATELOM925/MemeApp) - Laughter Just A Click Away
     - Innovative and fun Android application developed using Kotlin and sourced from Reddit's API through Retrofit.
@@ -299,10 +300,12 @@ st.write("")
 st.subheader("Extracurriculars", anchor="extracurricular")
 st.markdown(
     """
+    - **Vector AI 2025-2026 Scholarship Recipient**, York University (May 2025)
     - **President** @*[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (June 2023 - June 2024)
     - **Graphic Head** @*[Tattvam](https://www.instagram.com/tattvam.pdeu/)- The Sanskrit Club of PDEU* (May 2022 - May 2023)
-    - **Research Presenter** @*ADCIS 2024, BITS Pilani*- "Automated Sleep Stage Classification Using Machine Intelligence Techniques" (September 2024) <br> [Published @Springer Journal](https://link.springer.com/chapter/10.1007/978-981-96-3652-5_14)
+    - **Published Research Paper** @*ADCIS 2024, BITS Pilani*- "Automated Sleep Stage Classification Using Machine Intelligence Techniques" (September 2024) <br> [@Springer Journal](https://link.springer.com/chapter/10.1007/978-981-96-3652-5_14)
     - **Top-10 Rank** @ *Kaggle's ML Olympiad* - Forecasting India’s Weather (April 2024 - May 2024)
+    - **AI/ML Mentor** Guided 10+ students on projects including Autograder and Legal Clarity
     - **Volunteer** @ *Vardaan Foundation, Vadodara* - Civic and Social Internship: Taught digital literacy to underprivileged students (June 2022 - July 2022)
     """,
     unsafe_allow_html=True
