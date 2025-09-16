@@ -207,7 +207,7 @@ skills_data = [
     ('Databases', 'MySQL, MongoDB, PostgreSQL, Firebase'),
     ('Libraries/Frameworks', 'NumPy, Scipy, Pandas, Matplotlib, OpenCV, PIL, Tensorflow, Keras, NLTK, Streamlit, Flask, Pytesseract'),
     ('Developer Tools', 'Git, Github, Docker, AWS, Microsoft Office, Asana, Confluence, JIRA, AI Tools, Compass, Workbench, Postman'),
-    ('Areas of Interest', 'AI Democratization', 'NLP', 'LLMs', 'Deep Generative Models', 'Prompt engineering'),
+    ('Areas of Interest', 'AI Democratization, NLP, LLMs, Deep Generative Models, Prompt engineering'),
     ('Soft Skills', 'Avid listener, Critical Thinker, Problem-Solver'),
 ]
 index_labels = ['A', 'B', 'C', 'D', 'E', 'F']
