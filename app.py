@@ -260,12 +260,13 @@ st.write("")
 st.subheader("Projects", anchor="projects")
 st.markdown(
     """
+    
     :computer: [**LLMs for Optimization**](https://github.com/PATELOM925/LLMs-for-Optimization-Problems) - Job Shop Scheduling Optimization (JSSP)
     - Built a GNN-augmented LLM pipeline for scheduling by converting JSSP instances into disjunctive graphs (PyTorch Geometric) and serializing constraints into structured prompts for generation.
     - Pre-processed the noisy STARJOB dataset (130k to 9,525 usable instances), reducing fine-tuning runtime  from 70h to 11.5h using 4-bit LoRA (Unsloth) on an NVIDIA RTX A6000.
 
     :computer: [**GreenArm**](https://github.com/PATELOM925/GreenArm) - Vision Guided Robotic Waste Sorting
-    - Co-led a 5-member team to deliver ROS2 based perception-to-manipulation system to detect,\newline classify, and pick waste  using YOLOv8.
+    - Co-led a 5-member team to deliver ROS2 based perception-to-manipulation system to detect, classify, and pick waste  using YOLOv8.
     - Integrated OpenCV-based pixel-to-robot coordinate transformation for the Kinova Gen3 arm.
     - Implemented ArUco-based workspace calibration with cached transforms, improving positioning accuracy to 0.5-1cm precision under a fixed camera setup.
     
@@ -276,7 +277,7 @@ st.markdown(
     
     :computer: [**Driver Pay Forecasting**](https://github.com/PATELOM925/Uber_NYC_Driver_Pay_Prediction) - Uber NYC Driver Pay Prediction
     - Implemented machine learning and deep learning models (ANN, Random Forest, LSTM, BiLSTM, LSTM+GRU) and performed comparative analysis for pay prediction.
-    - Analyzed architecture and hyperparameters searches, achieving almost 12% lower RMSE vs. baseline.
+    - Analyzed architecture and hyperparameter searches, achieving almost 12% lower RMSE vs. baseline.
     - Visualized factors impacting Uber driver pay through features like date, time, location, and other trip details using Tableau.
     
     :computer: [**Indian Weather Prediction**](https://www.kaggle.com/code/iamommpatel/indian-weather-predictor) - Ranked in Top-5 for Kaggle's ML Olympiad (Forecasting India's Weather)
