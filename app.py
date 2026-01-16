@@ -10,7 +10,7 @@ import requests
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
  
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-resume_file = current_directory / 'details' / 'Om_Resume_Offline_jan.pdf.pdf'
+resume_file = current_directory / 'details' / 'Om_Resume_Offline_jan.pdf'
 profile_pic_path = current_directory / 'details' / 'Profile Photo - Om Patel.png'
 
 with open(resume_file, 'rb') as pdf_file:
