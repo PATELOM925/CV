@@ -10,7 +10,7 @@ import requests
 st.set_page_config(page_title="CV | OM M. PATEL", page_icon=":rocket:")
  
 current_directory = Path(__file__).parent if '__file__' in locals() else Path.cwd()
-resume_file = current_directory / 'details' / 'Om_Resume_Canada.pdf'
+resume_file = current_directory / 'details' / 'Om_Resume_Offline_jan.pdf.pdf'
 profile_pic_path = current_directory / 'details' / 'Profile Photo - Om Patel.png'
 
 with open(resume_file, 'rb') as pdf_file:
@@ -260,6 +260,15 @@ st.write("")
 st.subheader("Projects", anchor="projects")
 st.markdown(
     """
+    :computer: [**LLMs for Optimization**](https://github.com/PATELOM925/LLMs-for-Optimization-Problems) - Job Shop Scheduling Optimization (JSSP)
+    - Built a GNN-augmented LLM pipeline for scheduling by converting JSSP instances into disjunctive graphs (PyTorch Geometric) and serializing constraints into structured prompts for generation.
+    - Pre-processed the noisy STARJOB dataset (130k to 9,525 usable instances), reducing fine-tuning runtime  from 70h to 11.5h using 4-bit LoRA (Unsloth) on an NVIDIA RTX A6000.
+
+    :computer: [**GreenArm**](https://github.com/PATELOM925/GreenArm) - Vision Guided Robotic Waste Sorting
+    - Co-led a 5-member team to deliver ROS2 based perception-to-manipulation system to detect,\newline classify, and pick waste  using YOLOv8.
+    - Integrated OpenCV-based pixel-to-robot coordinate transformation for the Kinova Gen3 arm.
+    - Implemented ArUco-based workspace calibration with cached transforms, improving positioning accuracy to 0.5-1cm precision under a fixed camera setup.
+    
     :computer: [**Legal Clarity**](https://github.com/PATELOM925/Legal_Clarity) - Simplifying Legal Documents
     - Developed and deployed a containerized NLP Flask application for legal document processing.
     - Implemented advanced transformer-based models (Pegasus, T5, IndicBARTSS) using PyTorch and Hugging Face Transformers to enable multi-language legal text summarization and translation.
